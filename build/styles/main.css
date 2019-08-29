@@ -286,7 +286,7 @@ ul {
     text-align: center;
     grid-gap: 2rem;
     padding: 5rem 0;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     color: #555; }
     #about .about-a .about-item span {
@@ -321,6 +321,34 @@ ul {
         transform: rotate(45deg); }
     #about .about-a .about-item:hover h2 {
       color: #e74c3c; }
+  #about .about-b {
+    padding: 0 1rem 3rem 1rem;
+    display: flex;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #555; }
+    #about .about-b .aboutImage1 {
+      flex-basis: 43.2%;
+      margin-right: 60px; }
+      #about .about-b .aboutImage1 img {
+        display: block;
+        max-width: 100%; }
+    #about .about-b-history {
+      flex-basis: calc(100% - 43.2% - 100px); }
+      #about .about-b-history h1 {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 1.4rem;
+        border-left: 7px solid #e74c3c;
+        padding-left: 1rem; }
+      #about .about-b-history p {
+        line-height: 1.8;
+        font-size: 0.9rem; }
+      #about .about-b-history .btn-primary {
+        margin-top: 1rem; }
 
 #portfolio {
   height: 100vh;
