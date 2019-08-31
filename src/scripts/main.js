@@ -23,7 +23,7 @@ let controller = {
                     document.querySelector('a[href*=' + elem + ']').classList.add('active');
                 }
 
-                let anchorBtnOffset = document.getElementsByClassName('anchorBtn')[0].offsetTop - 150;
+                let anchorBtnOffset = document.getElementsByClassName('anchorBtn')[0].offsetTop;
 
                 if (anchorBtnOffset > scrollPosition) {
 

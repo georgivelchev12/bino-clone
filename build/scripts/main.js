@@ -22,7 +22,7 @@ var controller = {
           document.querySelector('a[href*=' + elem + ']').classList.add('active');
         }
 
-        var anchorBtnOffset = document.getElementsByClassName('anchorBtn')[0].offsetTop - 150;
+        var anchorBtnOffset = document.getElementsByClassName('anchorBtn')[0].offsetTop;
 
         if (anchorBtnOffset > scrollPosition) {
           document.getElementById("navbar").style.background = '';
