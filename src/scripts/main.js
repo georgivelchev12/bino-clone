@@ -1,4 +1,3 @@
-let PORT = process.env.PORT || 5500;
 
 let controller = {
     init: () => {
