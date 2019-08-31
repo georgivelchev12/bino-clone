@@ -462,10 +462,10 @@
   .grid {
     .element-item {
       @include breakpoint(max, width, 945px) {
-        width: 50%;
+        width: 50% !important;
       }
       @include breakpoint(max, width, 400px) {
-        width: 100%;
+        width: 100% !important;
       }
     }
   }
