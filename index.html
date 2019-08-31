@@ -14,6 +14,10 @@
     <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
     <link rel="stylesheet" href="build/styles/main.css" />
     <link rel="stylesheet" href="build/styles/media.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/lightbox2/dist/css/lightbox.css"
+    />
     <title>Bino</title>
   </head>
   <body id="home">
@@ -123,7 +127,7 @@
       </div>
       <div class="about-b">
         <div class="aboutImage1">
-                <img src="/img/aboutImg1.png" alt="">
+          <img src="/img/aboutImg1.png" alt="" />
         </div>
         <div class="about-b-history">
           <h1>Our History</h1>
@@ -145,20 +149,208 @@
           <a href="#work" class="btn-primary">Browse our work</a>
         </div>
       </div>
+      <div class="about-c">
+        <div class="about-c-services">
+          <h1>Our Services</h1>
+          <div class="services-item">
+            <h3>Web Design</h3>
+            <p>
+              Lorem ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the insustry's standart dummy text
+              ever. Lorem ipsum dolor sit. Lorem ipsum dolor sit.
+            </p>
+            <div class="services-item-icon"><i class="fas fa-tv"></i></div>
+          </div>
+          <div class="services-item">
+            <h3>Print Design</h3>
+            <p>
+              Lorem ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the insustry's standart dummy text
+              ever. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="services-item-icon">
+              <i class="far fa-file-alt"></i>
+            </div>
+          </div>
+          <div class="services-item">
+            <h3>Photography</h3>
+            <p>
+              Lorem ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the insustry's standart dummy text
+              ever. Lorem ipsum dolor sit.
+            </p>
+            <div class="services-item-icon">
+              <i class="fas fa-camera-retro"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="portfolio" class="section"></section>
-
-
-    <section id="work">
-        
+    <section id="portfolio" class="section">
+   <div class="portfolio-a">
+      <div class="head-title-content">
+          <h1>Recen Works</h1>
+          <p>
+            It has survived not only five centuries, but also the leap scrambled it
+            to make a type.
+          </p>
+          <div class="bar">
+            <hr class="line" />
+            <span class="dot"></span>
+            <hr class="line" />
+          </div>
+      </div>
+      <div id="filters" class="button-group">
+        <a class="button is-checked" data-filter="*">all</a>/
+        <a class="button" data-filter=".printDesign">Print Design</a>/
+        <a class="button" data-filter=".animation">Animation</a>/
+        <a class="button" data-filter=".art">Art</a>/
+        <a class="button" data-filter=".webDesign">Web Design</a>/
+        <a class="button" data-filter=".photography">Photography</a>/
+        <a class="button" data-filter=".video">Video</a>
+      </div>
+      <div class="grid">
+        <div class="portfolio-image element-item printDesign webDesign">
+          <div class="portfolioImg-1"  alt="image-1"></div>
+          <a
+            href="/img/portfolioImg1.jpg"
+            data-lightbox="image-1"
+            alt="image-1"
+          >
+          <div class="image-overlay">
+            <div></div>
+            <h2>Web Design</h2>
+            <p>web design / app</p>
+          </div>
+          </a>
+        </div>
+        <div class="portfolio-image element-item art">
+          <div class="portfolioImg-2" alt="image-2" ></div>
+          <a
+            href="/img/portfolioImg2.jpg"
+            data-lightbox="image-1"
+            alt="image-2"
+          >
+          <div class="image-overlay">
+              <div></div>
+              <h2>T-shirt Design</h2>
+              <p>art / t-shirt</p>
+            </div>
+          </a>
+        </div>
+        <div
+          class="portfolio-image element-item printDesign animation webDesign"
+        >
+        <div class="portfolioImg-3" alt="image-3" ></div>
+        <a
+        href="/img/portfolioImg3.jpg"
+        data-lightbox="image-1"
+        alt="image-3"
+      >
+      <div class="image-overlay">
+          <div></div>
+          <h2>Print Design</h2>
+          <p>print design / app</p>
+        </div>
+      </a>
+        </div>
+        <div class="portfolio-image element-item photography video webDesign">
+            <div class="portfolioImg-4" alt="image-4" ></div>
+          <a
+          href="/img/portfolioImg4.jpg"
+          data-lightbox="image-1"
+          alt="image-4"
+        >
+        <div class="image-overlay">
+            <div></div>
+            <h2>Photography</h2>
+            <p>photography / placeholder</p>
+          </div>
+        </a>
+        </div>
+        <div class="portfolio-image element-item printDesign art animation">
+            <div class="portfolioImg-5" alt="image-5" ></div>
+          <a
+          href="/img/portfolioImg5.jpg"
+          data-lightbox="image-1"
+          alt="image-5"
+        >
+        <div class="image-overlay">
+            <div></div>
+            <h2>Print Design</h2>
+            <p>print design / companies</p>
+          </div>
+        </a>
+        </div>
+        <div class="portfolio-image element-item art animation photography">
+            <div class="portfolioImg-6" alt="image-6" ></div>
+          <a
+          href="/img/portfolioImg6.jpg"
+          data-lightbox="image-1"
+          alt="image-6"
+        >
+        <div class="image-overlay">
+            <div></div>
+            <h2>Animation</h2>
+            <p>animation / app</p>
+          </div>
+        </a>
+        </div>
+        <div class="portfolio-image element-item art video photography">
+            <div class="portfolioImg-7" alt="image-7" ></div>
+          <a
+          href="/img/portfolioImg7.jpg"
+          data-lightbox="image-1"
+          alt="image-7"
+        >
+        <div class="image-overlay">
+            <div></div>
+            <h2>Photography</h2>
+            <p>photography / phone</p>
+          </div>
+        </a>
+        </div>
+        <div class="portfolio-image element-item webDesign">
+            <div class="portfolioImg-8" alt="image-8" ></div>
+          <a
+          href="/img/portfolioImg8.jpg"
+          data-lightbox="image-1"
+          alt="image-8"
+        >
+        <div class="image-overlay">
+            <div></div>
+            <h2>Web Design</h2>
+            <p>web design / app</p>
+          </div>
+        </a>
+        </div>
+      </div>
+   </div>
+   <div class="portfolio-b">
+      <div class="head-title-content">
+          <h1>Case study</h1>
+          <p>
+            A brief story about how this process works, keep an eye till the end.
+          </p>
+          <div class="bar">
+            <hr class="line" />
+            <span class="dot"></span>
+            <hr class="line" />
+          </div>
+      </div>
+   </div>
     </section>
+
+    <section id="work"></section>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
     <script src="../build/scripts/main.js"></script>
+    <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
   </body>
 </html>

@@ -3,6 +3,8 @@ let controller = {
         controller.scrollSpy();
         controller.headerSlider();
         controller.navbarToggler();
+        controller.filterImg();
+
     },
     scrollSpy: () => {
         let sections = {};
@@ -10,8 +12,7 @@ let controller = {
         document.querySelectorAll(".section").forEach((e) => {
             sections[e.id] = e.offsetTop;
         });
-
-        window.onscroll = () => {
+        let changeNavBackground = () => {
             let scrollPosition = document.documentElement.scrollTop
                 || document.body.scrollTop;
 
@@ -33,6 +34,9 @@ let controller = {
                 }
             }
         }
+        changeNavBackground();
+        window.addEventListener('scroll', changeNavBackground)
+        window.addEventListener('load', controller.scrollSpy)
     },
     headerSlider: () => {
         let carouselSlide = document.querySelector('.slider');
@@ -93,11 +97,11 @@ let controller = {
         })
         window.addEventListener("resize", sizeOfCarousel);
         window.addEventListener("load", sizeOfCarousel);
-        setInterval(automaticallySlide, 9000);
+
 
     },
     navbarToggler: () => {
-        if(window.innerWidth <= 945){
+        if (window.innerWidth <= 945) {
             let navbarAttrChanging = document.querySelectorAll(".nav-a");
             let toggleNav = (percantage) => {
                 document.getElementById("mySidebar").style.width = percantage;
@@ -116,13 +120,37 @@ let controller = {
                     toggleNav("0")
                 });
             })
-    
         }
-
         window.addEventListener("resize", controller.navbarToggler);
         window.addEventListener("scroll", controller.navbarToggler);
         window.addEventListener("load", controller.navbarToggler);
-    }
+    },
+    filterImg: () => {
+        let $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows'
+        });
+
+        let filterFns = {};
+
+        // bind filter button click
+        $('#filters').on('click', '.button',(e) => {
+            let filterValue = $(e.currentTarget).attr('data-filter');
+            // use filterFn if matches value
+            filterValue = filterFns[filterValue] || filterValue;
+            $grid.isotope({ filter: filterValue });
+        });
+
+        // change is-checked class on buttons
+        $('.button-group').each((i, buttonGroup)  => {
+            let $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', '.button', (e) => {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(e.currentTarget).addClass('is-checked');
+            });
+        });
+
+    },
 
 }
 window.onload = () => {

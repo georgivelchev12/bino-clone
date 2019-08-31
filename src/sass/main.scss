@@ -97,6 +97,27 @@ ul {
     transform: translateY(-2px) !important;
   }
 }
+.is-checked {
+  color: #e74c3c;
+}
+.head-title-content {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4.5rem;
+    margin-bottom: 1.4rem;
+    padding-left: 1rem;
+  }
+  p {
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+  .bar {
+    width: 15%;
+    margin: 1.6rem auto 3rem auto;
+  }
+}
 
 //Navbar
 
@@ -238,7 +259,7 @@ ul {
   #prevBtn {
     position: absolute;
     top: 40%;
-    left: 3%;
+    left: 2%;
     font-size: 2.2rem;
     color: rgba($color: #000000, $alpha: 0.6);
     background: #6a6a6a;
@@ -253,7 +274,7 @@ ul {
   #nextBtn {
     position: absolute;
     top: 40%;
-    right: 3%;
+    right: 2%;
     font-size: 2.2rem;
     color: rgba($color: #000000, $alpha: 0.6);
     background: #6a6a6a;
@@ -276,7 +297,7 @@ ul {
     height: 50px;
     background: #fff;
     border-radius: 50%;
-    border: 3px solid rgba($color: #333, $alpha: 0.2);
+    border: 4px solid rgba($color: #333, $alpha: 0.2);
     animation: glowing 800ms infinite;
     transition: all 0.3s;
 
@@ -340,7 +361,7 @@ ul {
     grid-gap: 2rem;
     padding: 5rem 0;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
     color: #555;
     .about-item {
       span {
@@ -390,9 +411,9 @@ ul {
   .about-b {
     padding: 0 1rem 3rem 1rem;
     display: flex;
-    min-width: 320px;
+
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
     color: #555;
     .aboutImage1 {
       flex-basis: 43.2%;
@@ -403,7 +424,8 @@ ul {
       }
     }
     &-history {
-      flex-basis: calc(100% - 43.2% - 100px);
+      flex-basis: calc(100% - 43.2% - 50px);
+      margin-left: 1rem;
       h1 {
         font-size: 2rem;
         letter-spacing: 1.5px;
@@ -422,12 +444,186 @@ ul {
       }
     }
   }
-}
-#portfolio {
-  height: 100vh;
-  background: blue;
+  .about-c {
+    background: #202020;
+    width: 100%;
+    padding: 150px 0;
+    position: relative;
+    &-services {
+      width: 54%;
+      text-align: right;
+      &:after {
+        content: "";
+        display: block;
+        width: 46%;
+        height: 100%;
+        background: url("/img/aboutImg2.jpg") right top no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin: 0 5rem 1rem 0;
+        padding-right: 1rem;
+        border-right: 7px solid #e74c3c;
+        color: #eee;
+      }
+      .services-item {
+        position: relative;
+        margin: 3rem 5rem 1rem 10rem;
+        h3 {
+          color: #e74c3c;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        p {
+          color: #aaa;
+          line-height: 1.8;
+          font-size: 0.9rem;
+        }
+        &-icon {
+          color: #e74c3c;
+          position: absolute;
+          top: 50%;
+          right: -117px;
+          width: 60px;
+          height: 60px;
+          background: #fff;
+          border-radius: 50%;
+          border: 4px solid rgba($color: #333, $alpha: 0.2);
+          transform: translate(0, -50%);
+          z-index: 1;
+          animation: glowing 800ms infinite;
+          transition: all 0.3s;
+          i {
+            font-size: 1.9rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
 }
 
+#portfolio {
+  .portfolio-a {
+    text-align: center;
+    color: #555;
+    .button-group {
+      margin-bottom: 3rem;
+      color: #555;
+      .button {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 0 1rem 3rem 1rem;
+        cursor: pointer;
+      }
+    }
+    .grid {
+      .element-item {
+        margin: 0px;
+        width: 25%;
+        height: 22rem;
+        > div {
+          width: 100%;
+          height: 100%;
+        }
+        .portfolioImg-1 {
+          background: url("/img/portfolioImg1.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-2 {
+          background: url("/img/portfolioImg2.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-3 {
+          background: url("/img/portfolioImg3.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-4 {
+          background: url("/img/portfolioImg4.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-5 {
+          background: url("/img/portfolioImg5.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-6 {
+          background: url("/img/portfolioImg6.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-7 {
+          background: url("/img/portfolioImg7.jpg") no-repeat center
+            center/cover;
+        }
+        .portfolioImg-8 {
+          background: url("/img/portfolioImg8.jpg") no-repeat center
+            center/cover;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        a {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba($color: #e74c3c, $alpha: 0.8);
+          color: #fff;
+          opacity: 0;
+          transition: 0.5s;
+          z-index: 0;
+
+          .image-overlay {
+            position: absolute;
+            margin-left: 2rem;
+            bottom: 5%;
+            text-align: left;
+            div {
+              width: 30%;
+              background: #fff;
+              height: 4px;
+              margin-bottom: 1.2rem;
+            }
+            h2 {
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              margin: 0.8rem 0;
+              font-size: 1.3rem;
+            }
+            p {
+              margin: 0;
+              padding: 0;
+              font-size: 0.9rem;
+            }
+          }
+        }
+        &:hover a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .portfolio-b {
+    text-align: center;
+    color: #555;
+
+  }
+}
 @keyframes glowing {
   0% {
     box-shadow: 0 0 0 0px rgba($color: #eee, $alpha: 0.3);

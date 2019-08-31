@@ -5,6 +5,7 @@ var controller = {
     controller.scrollSpy();
     controller.headerSlider();
     controller.navbarToggler();
+    controller.filterImg();
   },
   scrollSpy: function scrollSpy() {
     var sections = {};
@@ -12,7 +13,7 @@ var controller = {
       sections[e.id] = e.offsetTop;
     });
 
-    window.onscroll = function () {
+    var changeNavBackground = function changeNavBackground() {
       var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
       for (var elem in sections) {
@@ -30,6 +31,10 @@ var controller = {
         }
       }
     };
+
+    changeNavBackground();
+    window.addEventListener('scroll', changeNavBackground);
+    window.addEventListener('load', controller.scrollSpy);
   },
   headerSlider: function headerSlider() {
     var carouselSlide = document.querySelector('.slider');
@@ -94,7 +99,6 @@ var controller = {
     });
     window.addEventListener("resize", sizeOfCarousel);
     window.addEventListener("load", sizeOfCarousel);
-    setInterval(automaticallySlide, 9000);
   },
   navbarToggler: function navbarToggler() {
     if (window.innerWidth <= 945) {
@@ -123,6 +127,30 @@ var controller = {
     window.addEventListener("resize", controller.navbarToggler);
     window.addEventListener("scroll", controller.navbarToggler);
     window.addEventListener("load", controller.navbarToggler);
+  },
+  filterImg: function filterImg() {
+    var $grid = $('.grid').isotope({
+      itemSelector: '.element-item',
+      layoutMode: 'fitRows'
+    });
+    var filterFns = {}; // bind filter button click
+
+    $('#filters').on('click', '.button', function (e) {
+      var filterValue = $(e.currentTarget).attr('data-filter'); // use filterFn if matches value
+
+      filterValue = filterFns[filterValue] || filterValue;
+      $grid.isotope({
+        filter: filterValue
+      });
+    }); // change is-checked class on buttons
+
+    $('.button-group').each(function (i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on('click', '.button', function (e) {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $(e.currentTarget).addClass('is-checked');
+      });
+    });
   }
 };
 

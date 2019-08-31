@@ -3,6 +3,26 @@
     @content;
   }
 }
+.head-title-content{
+  h1 {
+    @include breakpoint(max, width, 945px){
+      font-size:1.7rem;
+    }
+  }
+  p {
+        @include breakpoint(max, width, 945px){
+      font-size:0.9rem;
+      padding: 0 1rem;
+    }
+  }
+  .bar {
+    width: 15%;
+    margin: 1.6rem auto 3rem auto;
+    @include breakpoint(max, width, 945px){
+      width: 40%;
+    }
+  }
+}
 
 #navbar {
   @include breakpoint(max, width, 1450px) {
@@ -55,16 +75,18 @@
         align-items: center;
         border-radius: 4px;
         justify-content: center;
+        transition: all 0.4s ease;
+        border: 1px solid #e74c3c;
         div {
           position: relative;
           flex: none;
-          width: 180%;
+          width: 300%;
           height: 2px;
           background: #fff;
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: all 0.4s ease;
+
           &:after,
           &:before {
             content: "";
@@ -78,6 +100,10 @@
           &:after {
             top: 10px;
           }
+        }
+        &:hover {
+          background: transparent;
+          border: 1px solid #fff;
         }
       }
     }
@@ -153,11 +179,9 @@
     }
   }
   .container {
-
     @include breakpoint(max, width, 945px) {
-      width: 90%;
+      width: 85%;
     }
-
 
     h3 {
       @include breakpoint(max, width, 1450px) {
@@ -277,6 +301,171 @@
           font-size: 0.6rem;
           padding: 0.5rem 1.6rem;
         }
+      }
+    }
+  }
+}
+
+#about {
+  .about-a {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include breakpoint(max, width, 1100px) {
+      width: 100%;
+    }
+    @include breakpoint(max, width, 900px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.5rem;
+    }
+    @include breakpoint(max, width, 670px) {
+      margin-bottom: 0;
+    }
+    @include breakpoint(max, width, 550px) {
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem;
+    }
+  }
+  .about-b {
+    @include breakpoint(max, width, 1000px) {
+      margin: 0 auto 2.5rem auto;
+    }
+    @include breakpoint(max, width, 670px) {
+      flex-direction: column;
+    }
+    .aboutImage1 {
+      margin-right: 25px;
+      @include breakpoint(max, width, 1000px) {
+        align-self: center;
+      }
+      @include breakpoint(max, width, 670px) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+    }
+    &-history {
+      @include breakpoint(max, width, 1000px) {
+        align-self: center;
+      }
+      h1 {
+        @include breakpoint(max, width, 850px) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+        @include breakpoint(max, width, 670px) {
+          font-size: 2rem;
+          margin-bottom: 1.4rem;
+        }
+      }
+      p {
+        @include breakpoint(max, width, 850px) {
+          line-height: 1.6;
+          font-size: 0.8rem;
+        }
+        @include breakpoint(max, width, 670px) {
+          font-size: 0.9rem;
+          line-height: 1.8;
+        }
+      }
+      .btn-primary {
+        margin-top: 0;
+        padding: 0.5rem 1.2rem;
+        @include breakpoint(max, width, 670px) {
+          margin-top: 1rem;
+
+          padding: 0.8rem 1.7rem;
+        }
+      }
+    }
+  }
+  .about-c {
+    @include breakpoint(max, width, 1080px) {
+      padding: 50px 0;
+    }
+
+    &-services {
+      @include breakpoint(max, width, 773px) {
+        text-align: start;
+        width: 100%;
+      }
+      &:after {
+        content: "";
+        @include breakpoint(max, width, 773px) {
+          display: none;
+        }
+      }
+      h1 {
+        @include breakpoint(max, width, 1080px) {
+          font-size: 1.6rem;
+          margin: 0 3rem 1rem 0;
+        }
+        @include breakpoint(max, width, 773px) {
+          font-size: 2rem;
+          margin: 0 0 1rem 2rem;
+          padding-left: 1rem;
+          border-left: 7px solid #e74c3c;
+          border-right: none;
+        }
+      }
+      .services-item {
+        position: relative;
+        margin: 3rem 5rem 1rem 10rem;
+        @include breakpoint(max, width, 1080px) {
+          margin: 3rem 5rem 1rem 5rem;
+        }
+        @include breakpoint(max, width, 773px) {
+          margin: 3rem 0 1rem 2rem;
+          padding-right: 7rem;
+        }
+        h3 {
+          @include breakpoint(max, width, 830px) {
+            font-size: 1rem;
+          }
+        }
+        p {
+          @include breakpoint(max, width, 830px) {
+            font-size: 0.8rem;
+            line-height: 1.6;
+          }
+        }
+        &-icon {
+          @include breakpoint(max, width, 773px) {
+            right: 0;
+            margin-right: 1.5rem;
+          }
+          i {
+            font-size: 1.9rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+#portfolio {
+ 
+  .button-group {
+    margin-bottom: 3rem;
+    color: #555;
+    .button {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0 1rem 3rem 1rem;
+      cursor: pointer;
+    }
+  }
+  .grid {
+    .element-item {
+      @include breakpoint(max, width, 945px) {
+        width: 50%;
+      }
+      @include breakpoint(max, width, 400px) {
+        width: 100%;
       }
     }
   }
