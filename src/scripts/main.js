@@ -1,3 +1,5 @@
+let PORT = process.env.PORT || 5500;
+
 let controller = {
     init: () => {
         controller.scrollSpy();
@@ -150,7 +152,7 @@ let controller = {
             });
         });
 
-    },
+    }
 
 }
 window.onload = () => {
