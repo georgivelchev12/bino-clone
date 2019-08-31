@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "lightbox2": "^2.11.1"
+  },
+  "engines": {
+    "node": "v10.15.3"
   }
 }
