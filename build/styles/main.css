@@ -52,7 +52,8 @@ ul {
   letter-spacing: 0.8px;
   padding: 0.8rem 1.7rem;
   border: 1px solid #e74c3c;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  cursor: pointer; }
   .btn-primary:hover {
     background: transparent;
     color: #e74c3c; }
@@ -68,7 +69,8 @@ ul {
   font-weight: 550;
   letter-spacing: 0.8px;
   padding: 0.8rem 3.1rem;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  cursor: pointer; }
   .btn-outline-primary:hover {
     background: #eee;
     color: #444; }
@@ -79,13 +81,13 @@ ul {
 .closebtn {
   display: none; }
 
-.active {
+.active1 {
   color: #e74c3c !important; }
-  .active:after {
+  .active1:after {
     content: "";
     opacity: 1 !important;
     transform: translateY(0) !important; }
-  .active:hover:after {
+  .active1:hover:after {
     transform: translateY(-2px) !important; }
 
 .is-checked {
@@ -440,6 +442,7 @@ ul {
       margin: 0 1rem 3rem 1rem;
       cursor: pointer; }
   #portfolio .portfolio-a .grid .element-item {
+    position: relative;
     margin: 0px;
     width: 25%;
     height: 22rem; }
@@ -503,6 +506,87 @@ ul {
 #portfolio .portfolio-b {
   text-align: center;
   color: #555; }
+  #portfolio .portfolio-b .case-study-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 5rem  0; }
+    #portfolio .portfolio-b .case-study-content .slider-caseStudy {
+      position: relative;
+      background: #fff; }
+      #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper {
+        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.32);
+        width: 620px;
+        height: 600px;
+        position: relative;
+        overflow: hidden; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow {
+          left: -620px;
+          width: 999999px;
+          position: absolute; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide {
+            width: 620px;
+            height: 600px;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span {
+              display: inline-block;
+              background: #e74c3c;
+              width: 70px;
+              height: 70px;
+              transform: rotate(-45deg);
+              margin-bottom: 2rem; }
+              #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span i {
+                transform: rotate(45deg);
+                margin-top: 1.2rem;
+                color: #fff; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide h1 {
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              transition: all 0.3s;
+              margin: 2rem 0; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide hr {
+              width: 15%; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide p {
+              color: #999;
+              font-size: 0.9rem;
+              padding: 0 2rem;
+              margin: 2rem 0; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide .btn-primary {
+              margin-bottom: 3rem; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav {
+          width: 620px;
+          position: absolute;
+          bottom: 5%; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul {
+            margin: 0;
+            padding: 0;
+            text-align: center; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul li {
+              list-style-type: none;
+              display: inline-block; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul .dot1 {
+              width: 10px;
+              height: 10px;
+              margin: 0 5px;
+              border-radius: 50%;
+              background: #eee;
+              transition: all 0.4s;
+              cursor: pointer; }
+              #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul .dot1.active {
+                background: #e74c3c;
+                width: 12px;
+                height: 12px; }
+    #portfolio .portfolio-b .case-study-content .case-img {
+      margin-left: -80px;
+      width: 600px;
+      height: 700px;
+      background: url("/img/case-study.jpg") no-repeat center center/cover; }
 
 @keyframes glowing {
   0% {

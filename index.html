@@ -14,6 +14,8 @@
     <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
     <link rel="stylesheet" href="build/styles/main.css" />
     <link rel="stylesheet" href="build/styles/media.css" />
+    <link rel="stylesheet" href="build/styles/animate.css" />
+
     <link
       rel="stylesheet"
       href="node_modules/lightbox2/dist/css/lightbox.css"
@@ -31,7 +33,7 @@
         <div id="mySidebar" class="sidebar">
           <a href="javascript:void(0)" class="closebtn">&times;</a>
           <ul>
-            <li><a class="nav-a active" href="#home">Home</a></li>
+            <li><a class="nav-a active1" href="#home">Home</a></li>
             <li><a class="nav-a" href="#about">About us</a></li>
             <li><a class="nav-a" href="#portfolio">Portfolio</a></li>
             <li><a class="nav-a" href="#pricing">Pricing</a></li>
@@ -84,7 +86,7 @@
 
     <section id="about" class="section">
       <div class="about-a">
-        <div class="about-item">
+        <div class="about-item wow bounceInUp">
           <span> <i class="fas fa-draw-polygon fa-2x"></i></span>
 
           <h2>Sleek Design</h2>
@@ -94,7 +96,7 @@
             industry. Lorem Ipsum has been the insustry
           </p>
         </div>
-        <div class="about-item">
+        <div class="about-item wow bounceInUp" data-wow-delay="0.1s">
           <span><i class="far fa-heart fa-2x"></i></span>
 
           <h2>Clean Code</h2>
@@ -104,7 +106,7 @@
             industry. Lorem Ipsum has been the insustry
           </p>
         </div>
-        <div class="about-item">
+        <div class="about-item wow bounceInUp" data-wow-delay="0.2s">
           <span> <i class="far fa-lightbulb fa-2x"></i></span>
 
           <h2>Creative Ideas</h2>
@@ -114,7 +116,7 @@
             industry. Lorem Ipsum has been the insustry
           </p>
         </div>
-        <div class="about-item">
+        <div class="about-item wow bounceInUp" data-wow-delay="0.3s">
           <span> <i class="far fa-comments fa-2x"></i></span>
 
           <h2>Free Support</h2>
@@ -126,10 +128,10 @@
         </div>
       </div>
       <div class="about-b">
-        <div class="aboutImage1">
+        <div class="aboutImage1 wow bounceInUp" >
           <img src="/img/aboutImg1.png" alt="" />
         </div>
-        <div class="about-b-history">
+        <div class="about-b-history wow bounceInUp" data-wow-delay="0.1s">
           <h1>Our History</h1>
           <p>
             Lorem ipsum is simply dummy text of the printing and typesetting
@@ -149,7 +151,7 @@
           <a href="#portfolio" class="btn-primary">Browse our work</a>
         </div>
       </div>
-      <div class="about-c">
+      <div class="about-c wow bounceInUp">
         <div class="about-c-services">
           <h1>Our Services</h1>
           <div class="services-item">
@@ -188,158 +190,197 @@
     </section>
 
     <section id="portfolio" class="section">
-   <div class="portfolio-a">
-      <div class="head-title-content">
+      <div class="portfolio-a">
+        <div class="head-title-content wow bounceInUp">
           <h1>Recent Works</h1>
           <p>
-            It has survived not only five centuries, but also the leap scrambled it
-            to make a type.
+            It has survived not only five centuries, but also the leap scrambled
+            it to make a type.
           </p>
           <div class="bar">
             <hr class="line" />
             <span class="dot"></span>
             <hr class="line" />
           </div>
-      </div>
-      <div id="filters" class="button-group">
-        <a class="button is-checked" data-filter="*">all</a>/
-        <a class="button" data-filter=".printDesign">Print Design</a>/
-        <a class="button" data-filter=".animation">Animation</a>/
-        <a class="button" data-filter=".art">Art</a>/
-        <a class="button" data-filter=".webDesign">Web Design</a>/
-        <a class="button" data-filter=".photography">Photography</a>/
-        <a class="button" data-filter=".video">Video</a>
-      </div>
-      <div class="grid">
-        <div class="portfolio-image element-item printDesign webDesign">
-          <div class="portfolioImg-1"  alt="image-1"></div>
-          <a
-            href="/img/portfolioImg1.jpg"
-            data-lightbox="image-1"
-            alt="image-1"
+        </div>
+        <div id="filters" class="button-group wow bounceInUp">
+          <a class="button is-checked" data-filter="*">all</a>/
+          <a class="button" data-filter=".printDesign">Print Design</a>/
+          <a class="button" data-filter=".animation">Animation</a>/
+          <a class="button" data-filter=".art">Art</a>/
+          <a class="button" data-filter=".webDesign">Web Design</a>/
+          <a class="button" data-filter=".photography">Photography</a>/
+          <a class="button" data-filter=".video">Video</a>
+        </div>
+        <div class="grid">
+          <div class="portfolio-image element-item printDesign webDesign wow bounceInUp" data-wow-delay="0.1s">
+            <div class="portfolioImg-1" alt="image-1"></div>
+            <a
+              href="/img/portfolioImg1.jpg"
+              data-lightbox="image-1"
+              alt="image-1"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Web Design</h2>
+                <p>web design / app</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-image element-item art wow bounceInUp" data-wow-delay="0.2s">
+            <div class="portfolioImg-2" alt="image-2"></div>
+            <a
+              href="/img/portfolioImg2.jpg"
+              data-lightbox="image-1"
+              alt="image-2"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>T-shirt Design</h2>
+                <p>art / t-shirt</p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="portfolio-image element-item printDesign animation webDesign wow bounceInUp" data-wow-delay="0.3s"
           >
-          <div class="image-overlay">
-            <div></div>
-            <h2>Web Design</h2>
-            <p>web design / app</p>
+            <div class="portfolioImg-3" alt="image-3"></div>
+            <a
+              href="/img/portfolioImg3.jpg"
+              data-lightbox="image-1"
+              alt="image-3"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Print Design</h2>
+                <p>print design / app</p>
+              </div>
+            </a>
           </div>
-          </a>
-        </div>
-        <div class="portfolio-image element-item art">
-          <div class="portfolioImg-2" alt="image-2" ></div>
-          <a
-            href="/img/portfolioImg2.jpg"
-            data-lightbox="image-1"
-            alt="image-2"
-          >
-          <div class="image-overlay">
-              <div></div>
-              <h2>T-shirt Design</h2>
-              <p>art / t-shirt</p>
-            </div>
-          </a>
-        </div>
-        <div
-          class="portfolio-image element-item printDesign animation webDesign"
-        >
-        <div class="portfolioImg-3" alt="image-3" ></div>
-        <a
-        href="/img/portfolioImg3.jpg"
-        data-lightbox="image-1"
-        alt="image-3"
-      >
-      <div class="image-overlay">
-          <div></div>
-          <h2>Print Design</h2>
-          <p>print design / app</p>
-        </div>
-      </a>
-        </div>
-        <div class="portfolio-image element-item photography video webDesign">
-            <div class="portfolioImg-4" alt="image-4" ></div>
-          <a
-          href="/img/portfolioImg4.jpg"
-          data-lightbox="image-1"
-          alt="image-4"
-        >
-        <div class="image-overlay">
-            <div></div>
-            <h2>Photography</h2>
-            <p>photography / placeholder</p>
+          <div class="portfolio-image element-item photography video webDesign wow bounceInUp" data-wow-delay="0.4s">
+            <div class="portfolioImg-4" alt="image-4"></div>
+            <a
+              href="/img/portfolioImg4.jpg"
+              data-lightbox="image-1"
+              alt="image-4"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Photography</h2>
+                <p>photography / placeholder</p>
+              </div>
+            </a>
           </div>
-        </a>
-        </div>
-        <div class="portfolio-image element-item printDesign art animation">
-            <div class="portfolioImg-5" alt="image-5" ></div>
-          <a
-          href="/img/portfolioImg5.jpg"
-          data-lightbox="image-1"
-          alt="image-5"
-        >
-        <div class="image-overlay">
-            <div></div>
-            <h2>Print Design</h2>
-            <p>print design / companies</p>
+          <div class="portfolio-image element-item printDesign art animation wow bounceInUp" data-wow-delay="0.4s">
+            <div class="portfolioImg-5" alt="image-5"></div>
+            <a
+              href="/img/portfolioImg5.jpg"
+              data-lightbox="image-1"
+              alt="image-5"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Print Design</h2>
+                <p>print design / companies</p>
+              </div>
+            </a>
           </div>
-        </a>
-        </div>
-        <div class="portfolio-image element-item art animation photography">
-            <div class="portfolioImg-6" alt="image-6" ></div>
-          <a
-          href="/img/portfolioImg6.jpg"
-          data-lightbox="image-1"
-          alt="image-6"
-        >
-        <div class="image-overlay">
-            <div></div>
-            <h2>Animation</h2>
-            <p>animation / app</p>
+          <div class="portfolio-image element-item art animation photography wow bounceInUp" data-wow-delay="0.3s">
+            <div class="portfolioImg-6" alt="image-6"></div>
+            <a
+              href="/img/portfolioImg6.jpg"
+              data-lightbox="image-1"
+              alt="image-6"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Animation</h2>
+                <p>animation / app</p>
+              </div>
+            </a>
           </div>
-        </a>
-        </div>
-        <div class="portfolio-image element-item art video photography">
-            <div class="portfolioImg-7" alt="image-7" ></div>
-          <a
-          href="/img/portfolioImg7.jpg"
-          data-lightbox="image-1"
-          alt="image-7"
-        >
-        <div class="image-overlay">
-            <div></div>
-            <h2>Photography</h2>
-            <p>photography / phone</p>
+          <div class="portfolio-image element-item art video photography wow bounceInUp" data-wow-delay="0.2s">
+            <div class="portfolioImg-7" alt="image-7"></div>
+            <a
+              href="/img/portfolioImg7.jpg"
+              data-lightbox="image-1"
+              alt="image-7"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Photography</h2>
+                <p>photography / phone</p>
+              </div>
+            </a>
           </div>
-        </a>
-        </div>
-        <div class="portfolio-image element-item webDesign">
-            <div class="portfolioImg-8" alt="image-8" ></div>
-          <a
-          href="/img/portfolioImg8.jpg"
-          data-lightbox="image-1"
-          alt="image-8"
-        >
-        <div class="image-overlay">
-            <div></div>
-            <h2>Web Design</h2>
-            <p>web design / app</p>
+          <div class="portfolio-image element-item webDesign wow bounceInUp" data-wow-delay="0.1s">
+            <div class="portfolioImg-8" alt="image-8"></div>
+            <a
+              href="/img/portfolioImg8.jpg"
+              data-lightbox="image-1"
+              alt="image-8"
+            >
+              <div class="image-overlay">
+                <div></div>
+                <h2>Web Design</h2>
+                <p>web design / app</p>
+              </div>
+            </a>
           </div>
-        </a>
         </div>
       </div>
-   </div>
-   <div class="portfolio-b">
-      <div class="head-title-content">
+      <div class="portfolio-b">
+        <div class="head-title-content wow bounceInUp">
           <h1>Case study</h1>
           <p>
-            A brief story about how this process works, keep an eye till the end.
+            A brief story about how this process works, keep an eye till the
+            end.
           </p>
           <div class="bar">
             <hr class="line" />
             <span class="dot"></span>
             <hr class="line" />
           </div>
+        </div>
+        <div class="case-study-content wow bounceInUp">
+          <div class="slider-caseStudy">
+            <div class="slideshow-wrapper">
+              <div class="slideshow">
+                <div class="slide">
+                    <span> <i class="far fa-lightbulb fa-2x"></i></span>
+                    <h1>Writing Clean Code</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, hic. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at sequi ex quisquam ad quo. Eum, placeat. Accusamus, ad distinctio?</p>
+                    <div class="btn-primary">Read More</div>
+                </div>
+                <div class="slide">
+                    <span> <i class="far fa-lightbulb fa-2x"></i></span>
+                    <h1>Accumulate Creative Ideas</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at sequi ex quisquam ad quo. Eum, placeat. Accusamus, ad distinctio?</p>
+                    <div class="btn-primary">Read More</div>
+                </div>
+                <div class="slide">
+                    <span> <i class="far fa-lightbulb fa-2x"></i></span>
+                    <h1>Get 100% free support</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur iusto incidunt asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, laborum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, at sequi ex quisquam ad quo. Eum, placeat. Accusamus, ad distinctio?</p>
+                    <div class="btn-primary">Read More</div>
+                </div>
+              </div>
+              <div class="slideshow-nav">
+                  <ul>
+                    <li class="dot1"></li>
+                    <li class="dot1"></li>
+                    <li class="dot1"></li>
+                  </ul>
+                </div>
+            </div>
+     
+          </div>
+          <div class="case-img"></div>
+        </div>
       </div>
-   </div>
     </section>
 
     <section id="work"></section>
@@ -352,5 +393,11 @@
 
     <script src="../build/scripts/main.js"></script>
     <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
+    <script src="/build/scripts/slideshow.js"></script>
+    <script src="build/scripts/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
   </body>
 </html>

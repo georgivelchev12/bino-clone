@@ -3,14 +3,14 @@
 var controller = {
   init: function init() {
     controller.scrollSpy();
-    controller.headerSlider();
+    controller.slider();
     controller.navbarToggler();
     controller.filterImg();
   },
   scrollSpy: function scrollSpy() {
     var sections = {};
     document.querySelectorAll(".section").forEach(function (e) {
-      sections[e.id] = e.offsetTop;
+      sections[e.id] = e.offsetTop - 50;
     });
 
     var changeNavBackground = function changeNavBackground() {
@@ -18,8 +18,8 @@ var controller = {
 
       for (var elem in sections) {
         if (sections[elem] <= scrollPosition) {
-          document.querySelector('.active').classList.remove('active');
-          document.querySelector('a[href*=' + elem + ']').classList.add('active');
+          document.querySelector('.active1').classList.remove('active1');
+          document.querySelector('a[href*=' + elem + ']').classList.add('active1');
         }
 
         var anchorBtnOffset = document.getElementsByClassName('anchorBtn')[0].offsetTop;
@@ -35,8 +35,18 @@ var controller = {
     changeNavBackground();
     window.addEventListener('scroll', changeNavBackground);
     window.addEventListener('load', controller.scrollSpy);
+    window.addEventListener('resize', controller.scrollSpy);
   },
-  headerSlider: function headerSlider() {
+  slider: function slider() {
+    $(document).ready(function () {
+      $(".slideshow").slideshow({
+        speed: 500,
+        pause: 2000,
+        effect: "slide",
+        tabClass: ".dot1",
+        auto: false
+      });
+    });
     var carouselSlide = document.querySelector('.slider');
     var sliderItems = document.querySelectorAll('.testimonial-item');
     var prevBtn = document.querySelector('#prevBtn');

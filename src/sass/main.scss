@@ -58,6 +58,7 @@ ul {
   padding: 0.8rem 1.7rem;
   border: 1px solid #e74c3c;
   transition: all 0.3s;
+  cursor: pointer;
   &:hover {
     background: transparent;
     color: #e74c3c;
@@ -75,6 +76,7 @@ ul {
   letter-spacing: 0.8px;
   padding: 0.8rem 3.1rem;
   transition: all 0.3s;
+  cursor: pointer;
   &:hover {
     background: #eee;
     color: #444;
@@ -86,7 +88,7 @@ ul {
 .closebtn {
   display: none;
 }
-.active {
+.active1 {
   color: #e74c3c !important;
   &:after {
     content: "";
@@ -530,6 +532,7 @@ ul {
     }
     .grid {
       .element-item {
+        position: relative;
         margin: 0px;
         width: 25%;
         height: 22rem;
@@ -621,9 +624,108 @@ ul {
   .portfolio-b {
     text-align: center;
     color: #555;
+    .case-study-content {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      margin: 5rem  0;
+      .slider-caseStudy {
+        position: relative;
+        background: #fff;
+        .slideshow-wrapper {
+          box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.32);
+          width: 620px;
+          height: 600px;
+          position: relative;
+          overflow: hidden;
+          .slideshow {
+            left:-620px;
+            width: 999999px;
+            position: absolute;
+            .slide {
+              width: 620px;
+              height: 600px;
+              float: left;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              span {
+                display: inline-block;
+                background: #e74c3c;
+                width: 70px;
+                height: 70px;
+                transform: rotate(-45deg);
+                margin-bottom: 2rem;
+                i {
+                  transform: rotate(45deg);
+                  margin-top: 1.2rem;
+                  color: #fff;
+                }
+              }
+              h1 {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s;
+                margin: 2rem 0;
+              }
+              hr {
+                width: 15%;
+              }
+              p {
+                color: #999;
+                font-size: 0.9rem;
+                padding: 0 2rem;
+                margin: 2rem 0;
+              }
+              .btn-primary{
+                margin-bottom: 3rem;
+              }
+            }
+          }
+          .slideshow-nav {
+            width: 620px;
+            position: absolute;
+            bottom: 5%;
+            ul {
+              margin: 0;
+              padding: 0;
+              text-align: center;
+              li {
+                list-style-type: none;
+                display: inline-block;
+              }
+              .dot1 {
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+                border-radius: 50%;
+                background: #eee;
+                transition: all 0.4s;
+                cursor: pointer;
+                &.active {
+                  background: #e74c3c;
+                  width: 12px;
+                height: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
 
+      .case-img {
+        margin-left: -80px;
+        width: 600px;
+        height: 700px;
+        background: url("/img/case-study.jpg") no-repeat center center/cover;
+      }
+    }
   }
 }
+
 @keyframes glowing {
   0% {
     box-shadow: 0 0 0 0px rgba($color: #eee, $alpha: 0.3);

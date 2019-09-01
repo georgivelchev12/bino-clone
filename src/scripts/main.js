@@ -2,7 +2,7 @@
 let controller = {
     init: () => {
         controller.scrollSpy();
-        controller.headerSlider();
+        controller.slider();
         controller.navbarToggler();
         controller.filterImg();
 
@@ -11,16 +11,19 @@ let controller = {
         let sections = {};
 
         document.querySelectorAll(".section").forEach((e) => {
-            sections[e.id] = e.offsetTop;
+            sections[e.id] = e.offsetTop -50;
+
+            
         });
+        
         let changeNavBackground = () => {
             let scrollPosition = document.documentElement.scrollTop
                 || document.body.scrollTop;
 
             for (let elem in sections) {
                 if (sections[elem] <= scrollPosition) {
-                    document.querySelector('.active').classList.remove('active');
-                    document.querySelector('a[href*=' + elem + ']').classList.add('active');
+                    document.querySelector('.active1').classList.remove('active1');
+                    document.querySelector('a[href*=' + elem + ']').classList.add('active1');
                 }
 
                 let anchorBtnOffset = document.getElementsByClassName('anchorBtn')[0].offsetTop;
@@ -38,8 +41,18 @@ let controller = {
         changeNavBackground();
         window.addEventListener('scroll', changeNavBackground)
         window.addEventListener('load', controller.scrollSpy)
+        window.addEventListener('resize', controller.scrollSpy)
     },
-    headerSlider: () => {
+    slider: () => {
+        $(document).ready(() => {
+            $(".slideshow").slideshow({
+                speed: 500,
+                pause: 2000,
+                effect: "slide",
+                tabClass: ".dot1",
+                auto: false
+            });
+        });
         let carouselSlide = document.querySelector('.slider');
         let sliderItems = document.querySelectorAll('.testimonial-item');
 
@@ -98,8 +111,6 @@ let controller = {
         })
         window.addEventListener("resize", sizeOfCarousel);
         window.addEventListener("load", sizeOfCarousel);
-
-
     },
     navbarToggler: () => {
         if (window.innerWidth <= 945) {
@@ -135,7 +146,7 @@ let controller = {
         let filterFns = {};
 
         // bind filter button click
-        $('#filters').on('click', '.button',(e) => {
+        $('#filters').on('click', '.button', (e) => {
             let filterValue = $(e.currentTarget).attr('data-filter');
             // use filterFn if matches value
             filterValue = filterFns[filterValue] || filterValue;
@@ -143,7 +154,7 @@ let controller = {
         });
 
         // change is-checked class on buttons
-        $('.button-group').each((i, buttonGroup)  => {
+        $('.button-group').each((i, buttonGroup) => {
             let $buttonGroup = $(buttonGroup);
             $buttonGroup.on('click', '.button', (e) => {
                 $buttonGroup.find('.is-checked').removeClass('is-checked');
@@ -154,7 +165,10 @@ let controller = {
     }
 
 }
+
+
 window.onload = () => {
+
     controller.init();
 }
 
