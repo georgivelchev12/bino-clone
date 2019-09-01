@@ -42,24 +42,22 @@ let controller = {
         window.addEventListener('resize', controller.scrollSpy)
     },
     slider: () => {
-        $(document).ready(() => {
-            $(".slideshow").slideshow({
-                speed: 500,
-                pause: 2000,
-                effect: "slide",
-                tabClass: ".dot1",
-                auto: false
+        let sliderFunct = (slideClass) =>{
+            $(document).ready(() => {
+                $(slideClass).slideshow({
+                    speed: 500,
+                    pause: 2000,
+                    effect: "slide",
+                    tabClass: ".dot1",
+                    auto: false
+                });
             });
-        });
-        $(document).ready(() => {
-            $(".slideshowHome").slideshow({
-                speed: 500,
-                pause: 2000,
-                effect: "slide",
-                tabClass: ".dot1",
-                auto: false
-            });
-        });
+        }
+        sliderFunct(".slideshow");
+        sliderFunct(".slideshowHome");
+        window.addEventListener('load', controller.slider)
+        window.addEventListener('resize', controller.slider)
+        window.addEventListener('orientationchange', controller.slider)
     },
     navbarToggler: () => {
         if (window.innerWidth <= 945) {

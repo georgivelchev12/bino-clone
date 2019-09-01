@@ -38,24 +38,23 @@ var controller = {
     window.addEventListener('resize', controller.scrollSpy);
   },
   slider: function slider() {
-    $(document).ready(function () {
-      $(".slideshow").slideshow({
-        speed: 500,
-        pause: 2000,
-        effect: "slide",
-        tabClass: ".dot1",
-        auto: false
+    var sliderFunct = function sliderFunct(slideClass) {
+      $(document).ready(function () {
+        $(slideClass).slideshow({
+          speed: 500,
+          pause: 2000,
+          effect: "slide",
+          tabClass: ".dot1",
+          auto: false
+        });
       });
-    });
-    $(document).ready(function () {
-      $(".slideshowHome").slideshow({
-        speed: 500,
-        pause: 2000,
-        effect: "slide",
-        tabClass: ".dot1",
-        auto: false
-      });
-    });
+    };
+
+    sliderFunct(".slideshow");
+    sliderFunct(".slideshowHome");
+    window.addEventListener('load', controller.slider);
+    window.addEventListener('resize', controller.slider);
+    window.addEventListener('orientationchange', controller.slider);
   },
   navbarToggler: function navbarToggler() {
     if (window.innerWidth <= 945) {

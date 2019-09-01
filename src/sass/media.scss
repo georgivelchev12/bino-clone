@@ -165,12 +165,18 @@
       @include breakpoint(max, width, 700px) {
         width: 400px;
       }
+      @include breakpoint(max, width, 400px) {
+        width: 300px;
+      }
       .slideshowHome {
         @include breakpoint(max, width, 999px) {
           left: -700px;
         }
         @include breakpoint(max, width, 700px) {
           left: -400px;
+        }
+        @include breakpoint(max, width, 400px) {
+          left: -300px;
         }
         .slide {
           
@@ -180,9 +186,17 @@
           @include breakpoint(max, width, 700px) {
             width: 400px;
           }
+          @include breakpoint(max, width, 400px) {
+            width: 300px;
+          }
           .container {
             @include breakpoint(max, width, 945px) {
               height: 80%;
+            }
+        
+            @include breakpoint(max, width, 500px) {
+              height: 80%;
+              width: 90%;
             }
         
             h3 {
@@ -308,35 +322,34 @@
           }
       }
     }
-    .slideshow-nav {
-      width: 100%;
-      position: absolute;
-     top:40%;
-
-      .prev {
-        @include breakpoint(max, width, 700px) {
-          font-size: 1.4rem;
-        }
+   
+  }
+  .slideshow-nav {
+    .prev {
+      @include breakpoint(max, width, 700px) {
+        font-size: 1.4rem;
       }
-      .next {
-        @include breakpoint(max, width, 700px) {
-          font-size: 1.4rem;
-        }
-      }
-      
     }
+    .next {
+      @include breakpoint(max, width, 700px) {
+        font-size: 1.4rem;
+      }
+    }
+    
   }
 }
   .anchorBtn {
     @include breakpoint(max, width, 700px) {
       width: 40px;
       height: 40px;
-      bottom: 2rem;
       &:before {
         content: "";
         width: 40px;
         height: 40px;
       }
+    }
+    @include breakpoint(max, height, 450px) {
+      bottom: 0rem;
     }
   }
 }
