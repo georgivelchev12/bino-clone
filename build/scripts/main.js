@@ -47,68 +47,15 @@ var controller = {
         auto: false
       });
     });
-    var carouselSlide = document.querySelector('.slider');
-    var sliderItems = document.querySelectorAll('.testimonial-item');
-    var prevBtn = document.querySelector('#prevBtn');
-    var nextBtn = document.querySelector('#nextBtn');
-    var counter = 1;
-    var size;
-
-    var transformCarousel = function transformCarousel() {
-      carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
-    };
-
-    var sizeOfCarousel = function sizeOfCarousel() {
-      size = carouselSlide.clientWidth;
-      transformCarousel();
-    };
-
-    sizeOfCarousel();
-    transformCarousel();
-
-    var automaticallySlide = function automaticallySlide() {
-      if (counter >= sliderItems.length - 1) {
-        return;
-      }
-
-      carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-      counter++;
-      transformCarousel();
-    };
-
-    nextBtn.addEventListener('click', function () {
-      if (counter >= sliderItems.length - 1) {
-        return;
-      }
-
-      carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-      counter++;
-      transformCarousel();
+    $(document).ready(function () {
+      $(".slideshowHome").slideshow({
+        speed: 500,
+        pause: 2000,
+        effect: "slide",
+        tabClass: ".dot1",
+        auto: false
+      });
     });
-    prevBtn.addEventListener('click', function () {
-      if (counter <= 0) {
-        return;
-      }
-
-      carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-      counter--;
-      transformCarousel();
-    });
-    carouselSlide.addEventListener('transitionend', function () {
-      if (sliderItems[counter].id == 'lastClone') {
-        carouselSlide.style.transition = 'none';
-        counter = sliderItems.length - 2;
-        transformCarousel();
-      }
-
-      if (sliderItems[counter].id == 'firstClone') {
-        carouselSlide.style.transition = 'none';
-        counter = sliderItems.length - counter;
-        transformCarousel();
-      }
-    });
-    window.addEventListener("resize", sizeOfCarousel);
-    window.addEventListener("load", sizeOfCarousel);
   },
   navbarToggler: function navbarToggler() {
     if (window.innerWidth <= 945) {

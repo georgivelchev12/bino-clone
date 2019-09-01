@@ -12,8 +12,6 @@ let controller = {
 
         document.querySelectorAll(".section").forEach((e) => {
             sections[e.id] = e.offsetTop -50;
-
-            
         });
         
         let changeNavBackground = () => {
@@ -53,64 +51,15 @@ let controller = {
                 auto: false
             });
         });
-        let carouselSlide = document.querySelector('.slider');
-        let sliderItems = document.querySelectorAll('.testimonial-item');
-
-        let prevBtn = document.querySelector('#prevBtn')
-        let nextBtn = document.querySelector('#nextBtn')
-
-        let counter = 1;
-        let size;
-
-        let transformCarousel = () => {
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        }
-        let sizeOfCarousel = () => {
-            size = carouselSlide.clientWidth;
-            transformCarousel()
-        }
-
-        sizeOfCarousel();
-        transformCarousel();
-        let automaticallySlide = () => {
-            if (counter >= sliderItems.length - 1) {
-                return;
-            }
-            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-            counter++;
-            transformCarousel();
-        }
-
-        nextBtn.addEventListener('click', () => {
-            if (counter >= sliderItems.length - 1) {
-                return;
-            }
-            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-            counter++;
-            transformCarousel();
-        })
-        prevBtn.addEventListener('click', () => {
-            if (counter <= 0) {
-                return;
-            }
-            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-            counter--;
-            transformCarousel()
-        })
-        carouselSlide.addEventListener('transitionend', () => {
-            if (sliderItems[counter].id == 'lastClone') {
-                carouselSlide.style.transition = 'none';
-                counter = sliderItems.length - 2;
-                transformCarousel()
-            }
-            if (sliderItems[counter].id == 'firstClone') {
-                carouselSlide.style.transition = 'none';
-                counter = sliderItems.length - counter;
-                transformCarousel()
-            }
-        })
-        window.addEventListener("resize", sizeOfCarousel);
-        window.addEventListener("load", sizeOfCarousel);
+        $(document).ready(() => {
+            $(".slideshowHome").slideshow({
+                speed: 500,
+                pause: 2000,
+                effect: "slide",
+                tabClass: ".dot1",
+                auto: false
+            });
+        });
     },
     navbarToggler: () => {
         if (window.innerWidth <= 945) {

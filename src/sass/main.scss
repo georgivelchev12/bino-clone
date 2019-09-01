@@ -207,31 +207,103 @@ ul {
 
 #home {
   overflow: hidden;
-  width: 100%;
-  height: 95vh;
-  position: relative;
   padding-bottom: 3rem;
-  .slider {
-    min-width: 100%;
-    height: 100%;
-    display: flex;
-    transform: translateX(-1903px);
-    .testimonial-item {
+  .slider-home {
+    width: 100%;
+    height: 95vh;
+    background: url("/img/img1.jpg") no-repeat center center/cover;
+    position: relative;
+    .opacity {
+      position: absolute;
+      height: 95vh;
       min-width: 100%;
-      .opacity {
-        height: 95vh;
-        min-width: 100%;
-        background: rgba($color: #000000, $alpha: 0.7);
+      background: rgba($color: #000000, $alpha: 0.7);
+    }
+    .slideshow-wrapper {
+      top: 0;
+      left: 0;
+      right:0;
+      bottom:0;
+      margin: auto;
+      max-width: 1000px;
+      height: 95vh;
+      overflow: hidden;
+      position: relative;
+      .slideshowHome {
+        left: -1000px;
+        width: 999999px;
+        position: absolute;
+        display: flex;
+        .slide {
+          width: 1000px;
+          height: 95vh;
+          .container {
+            height: 100%;
+            width: 100%;
+            color: #dadada;
+            h3 {
+              font-size: 1.5rem;
+              font-weight: 450;
+              letter-spacing: 1px;
+            }
+            h1 {
+              margin: 0 0 1rem 0;
+              font-size: 5rem;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            p {
+              width: 70%;
+              margin-top: 1.5rem;
+              margin-bottom: 4rem;
+            }
+            .home-btns {
+              .btn-primary {
+                margin-right: 0.6rem;
+              }
+              .btn-outline-primary {
+                margin-left: 0.6rem;
+              }
+            }
+          }
+        }
       }
     }
-    .img1 {
-      background: url("/img/img1.jpg") no-repeat center center/cover;
-    }
-    .img2 {
-      background: url("/img/img2.jpg") no-repeat center center/cover;
-    }
-    .img3 {
-      background: url("/img/img3.jpg") no-repeat center center/cover;
+    .slideshow-nav {
+      width: 100%;
+      position: absolute;
+     top:40%;
+
+      .prev {
+        position: absolute;
+        left: 5%;
+        font-size: 2.2rem;
+        color: rgba($color: #000000, $alpha: 0.6);
+        background: #6a6a6a;
+        padding: 0 0.4rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &:hover {
+          background: #e74c3c;
+          color: rgba($color: #fff, $alpha: 0.7);
+        }
+      }
+      .next {
+        position: absolute;
+
+        right: 5%;
+        font-size: 2.2rem;
+        color: rgba($color: #000000, $alpha: 0.6);
+        background: #6a6a6a;
+        padding: 0 0.4rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &:hover {
+          background: #e74c3c;
+          color: rgba($color: #fff, $alpha: 0.7);
+        }
+      }
+      
     }
   }
 
@@ -258,36 +330,7 @@ ul {
       width: 0;
     }
   }
-  #prevBtn {
-    position: absolute;
-    top: 40%;
-    left: 2%;
-    font-size: 2.2rem;
-    color: rgba($color: #000000, $alpha: 0.6);
-    background: #6a6a6a;
-    padding: 0 0.4rem;
-    border-radius: 4px;
-    transition: all 0.3s;
-    &:hover {
-      background: #e74c3c;
-      color: rgba($color: #fff, $alpha: 0.7);
-    }
-  }
-  #nextBtn {
-    position: absolute;
-    top: 40%;
-    right: 2%;
-    font-size: 2.2rem;
-    color: rgba($color: #000000, $alpha: 0.6);
-    background: #6a6a6a;
-    padding: 0 0.4rem;
-    border-radius: 4px;
-    transition: all 0.3s;
-    &:hover {
-      background: #e74c3c;
-      color: rgba($color: #fff, $alpha: 0.7);
-    }
-  }
+
   .anchorBtn {
     position: absolute;
     bottom: 1.4rem;
@@ -318,37 +361,6 @@ ul {
     }
     &:hover {
       background: #444;
-    }
-  }
-  .container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 15%;
-    color: #dadada;
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 450;
-      letter-spacing: 1px;
-    }
-    h1 {
-      margin: 0 0 1rem 0;
-      font-size: 5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    p {
-      width: 70%;
-      margin-top: 1.5rem;
-      margin-bottom: 4rem;
-    }
-    .home-btns {
-      .btn-primary {
-        margin-right: 0.6rem;
-      }
-      .btn-outline-primary {
-        margin-left: 0.6rem;
-      }
     }
   }
 }
@@ -629,7 +641,7 @@ ul {
       align-items: center;
       text-align: center;
       justify-content: center;
-      margin: 5rem  0;
+      margin: 5rem 0;
       .slider-caseStudy {
         position: relative;
         background: #fff;
@@ -640,7 +652,7 @@ ul {
           position: relative;
           overflow: hidden;
           .slideshow {
-            left:-620px;
+            left: -620px;
             width: 999999px;
             position: absolute;
             .slide {
@@ -680,7 +692,7 @@ ul {
                 padding: 0 2rem;
                 margin: 2rem 0;
               }
-              .btn-primary{
+              .btn-primary {
                 margin-bottom: 3rem;
               }
             }
@@ -708,7 +720,7 @@ ul {
                 &.active {
                   background: #e74c3c;
                   width: 12px;
-                height: 12px;
+                  height: 12px;
                 }
               }
             }
