@@ -15,7 +15,7 @@
       speed: 500,
       pause: 2000,
       effect: "slide",
-      tabClass: ".tab",
+      tabClass: ".dot1",
       prevClass: ".prev",
       nextClass: ".next",
       auto: true
