@@ -430,3 +430,98 @@
 @media (max-width: 400px) {
   #portfolio .portfolio-a .grid .element-item {
     width: 100% !important; } }
+
+@media (max-width: 700px) {
+  #portfolio .portfolio-b .case-study-content {
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: 0 auto; } }
+
+@media (max-width: 700px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy {
+    position: absolute;
+    top: 0;
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.85); } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper {
+    width: 420px;
+    height: 500px; } }
+
+@media (max-width: 400px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper {
+    width: 320px; } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow {
+    left: -420px; } }
+
+@media (max-width: 400px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow {
+    left: -320px; } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide {
+    width: 420px;
+    height: 500px; } }
+
+@media (max-width: 400px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide {
+    width: 320px; } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1.2rem; } }
+
+#portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span i {
+  transform: rotate(45deg);
+  margin-top: 0.7rem;
+  color: #fff; }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide h1 {
+    margin: 1rem 0;
+    font-size: 1rem; } }
+
+#portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide hr {
+  width: 15%; }
+
+#portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide p {
+  color: #999; }
+  @media (max-width: 1180px) {
+    #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide p {
+      margin: 1.3rem 0;
+      font-size: 0.8rem; } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide .btn-primary {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.7rem; } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav {
+    width: 420px; } }
+
+@media (max-width: 400px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav {
+    width: 320px; } }
+
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .case-img {
+    width: 420px;
+    height: 600px; } }
+
+@media (max-width: 700px) {
+  #portfolio .portfolio-b .case-study-content .case-img {
+    width: 420px;
+    height: 500px;
+    margin-left: 0; } }
+
+@media (max-width: 400px) {
+  #portfolio .portfolio-b .case-study-content .case-img {
+    width: 320px; } }
