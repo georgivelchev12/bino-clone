@@ -566,9 +566,9 @@
                   margin-bottom: 1.2rem;
                 }
                 i {
-                  transform: rotate(45deg);
-                  margin-top: 0.7rem;
-                  color: #fff;
+                  @include breakpoint(max, width, 1180px) {
+                    margin-top: 0.7rem;
+                  }
                 }
               }
               h1 {

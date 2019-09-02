@@ -477,10 +477,9 @@
     height: 55px;
     margin-bottom: 1.2rem; } }
 
-#portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span i {
-  transform: rotate(45deg);
-  margin-top: 0.7rem;
-  color: #fff; }
+@media (max-width: 1180px) {
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span i {
+    margin-top: 0.7rem; } }
 
 @media (max-width: 1180px) {
   #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide h1 {
