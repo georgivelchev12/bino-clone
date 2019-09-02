@@ -179,7 +179,9 @@ ul {
 
 #home {
   overflow: hidden;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column; }
   #home .slider-home {
     width: 100%;
     height: 95vh;
@@ -277,19 +279,19 @@ ul {
       border-right: 50vw solid transparent;
       width: 0; }
   #home .anchorBtn {
-    position: absolute;
-    bottom: 1%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -2rem;
     width: 50px;
     height: 50px;
     background: #fff;
     border-radius: 50%;
     border: 4px solid rgba(51, 51, 51, 0.2);
     animation: glowing 800ms infinite;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    z-index: 1; }
     #home .anchorBtn:before {
       content: "";
       position: absolute;

@@ -339,8 +339,11 @@
   }
 }
   .anchorBtn {
+    @include breakpoint(max, height, 786px) {
+    
+    }
     @include breakpoint(max, width, 700px) {
-      bottom: 2%;
+   
       width: 40px;
       height: 40px;
       &:before {
@@ -348,9 +351,6 @@
         width: 40px;
         height: 40px;
       }
-    }
-    @include breakpoint(max, height, 450px) {
-      bottom: 0%;
     }
   }
 }
