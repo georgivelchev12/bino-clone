@@ -5,7 +5,7 @@ let controller = {
         controller.slider();
         controller.navbarToggler();
         controller.filterImg();
-
+        controller.wowAnimations();
     },
     scrollSpy: () => {
         let sections = {};
@@ -43,18 +43,22 @@ let controller = {
     },
     slider: () => {
         let sliderFunct = (slideClass) =>{
-            $(document).ready(() => {
-                $(slideClass).slideshow({
-                    speed: 500,
-                    pause: 2000,
-                    effect: "slide",
-                    tabClass: ".dot1",
-                    auto: false
-                });
-            });
+           new Swiper(slideClass, {
+            direction: 'horizontal',
+            loop: true,
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }
+           })
         }
-        sliderFunct(".slideshow");
-        sliderFunct(".slideshowHome");
+        sliderFunct(".slider-1");
+     
         window.addEventListener('load', controller.slider)
         window.addEventListener('resize', controller.slider)
         window.addEventListener('orientationchange', controller.slider)
@@ -109,13 +113,16 @@ let controller = {
             });
         });
 
+    },
+    wowAnimations: () =>{
+        new WOW().init();
     }
 
 }
 
 
 window.onload = () => {
-
+    
     controller.init();
 }
 

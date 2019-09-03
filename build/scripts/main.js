@@ -6,6 +6,7 @@ var controller = {
     controller.slider();
     controller.navbarToggler();
     controller.filterImg();
+    controller.wowAnimations();
   },
   scrollSpy: function scrollSpy() {
     var sections = {};
@@ -39,19 +40,22 @@ var controller = {
   },
   slider: function slider() {
     var sliderFunct = function sliderFunct(slideClass) {
-      $(document).ready(function () {
-        $(slideClass).slideshow({
-          speed: 500,
-          pause: 2000,
-          effect: "slide",
-          tabClass: ".dot1",
-          auto: false
-        });
+      new Swiper(slideClass, {
+        direction: 'horizontal',
+        loop: true,
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination'
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       });
     };
 
-    sliderFunct(".slideshow");
-    sliderFunct(".slideshowHome");
+    sliderFunct(".slider-1");
     window.addEventListener('load', controller.slider);
     window.addEventListener('resize', controller.slider);
     window.addEventListener('orientationchange', controller.slider);
@@ -107,6 +111,9 @@ var controller = {
         $(e.currentTarget).addClass('is-checked');
       });
     });
+  },
+  wowAnimations: function wowAnimations() {
+    new WOW().init();
   }
 };
 

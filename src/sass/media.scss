@@ -155,8 +155,6 @@
   }
 }
 #home {
-  overflow: hidden;
-  padding-bottom: 3rem;
   .slider-home {
     .slideshow-wrapper {
       @include breakpoint(max, width, 999px) {
@@ -577,7 +575,7 @@
                 width: 15%;
               }
               p {
-                color: #999;
+                color: #777;
                 @include breakpoint(max, width, 1180px){
                   margin: 1.3rem 0;
                   font-size: 0.8rem;
