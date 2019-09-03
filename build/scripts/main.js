@@ -7,6 +7,7 @@ var controller = {
     controller.navbarToggler();
     controller.filterImg();
     controller.wowAnimations();
+    controller.statCounter();
   },
   scrollSpy: function scrollSpy() {
     var sections = {};
@@ -51,7 +52,8 @@ var controller = {
       pagination: {
         el: '.swiper-pagination',
         clickable: true
-      }
+      },
+      initialSlide: 1
     });
 
     var updateFunct = function updateFunct() {
@@ -112,6 +114,14 @@ var controller = {
       $buttonGroup.on('click', '.button', function (e) {
         $buttonGroup.find('.is-checked').removeClass('is-checked');
         $(e.currentTarget).addClass('is-checked');
+      });
+    });
+  },
+  statCounter: function statCounter() {
+    jQuery(document).ready(function ($) {
+      $('.counter').counterUp({
+        delay: 10,
+        time: 1000
       });
     });
   },

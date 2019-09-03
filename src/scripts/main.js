@@ -6,6 +6,7 @@ let controller = {
         controller.navbarToggler();
         controller.filterImg();
         controller.wowAnimations();
+        controller.statCounter();
     },
     scrollSpy: () => {
         let sections = {};
@@ -54,13 +55,14 @@ let controller = {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true
-            }
+            },
+            initialSlide: 1
         })
-        let updateFunct = () =>{
+        let updateFunct = () => {
             swiper1.update();
             swiper2.update();
         }
-        window.addEventListener('resize',updateFunct)
+        window.addEventListener('resize', updateFunct)
         window.addEventListener('load', updateFunct)
         window.addEventListener('orientationchange', updateFunct)
     },
@@ -114,6 +116,15 @@ let controller = {
             });
         });
 
+    },
+
+    statCounter: () => {
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
     },
     wowAnimations: () => {
         new WOW().init();

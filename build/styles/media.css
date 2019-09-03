@@ -491,3 +491,19 @@
 @media (max-width: 400px) {
   #portfolio .portfolio-b .case-study-content .case-img {
     width: 320px; } }
+
+@media (max-width: 880px) {
+  #portfolio .portfolio-c {
+    padding: 70px 0 100px; } }
+
+@media (max-width: 880px) {
+  #portfolio .portfolio-c .stats-wrap {
+    justify-content: center; } }
+
+@media (max-width: 880px) {
+  #portfolio .portfolio-c .stats-wrap .stats {
+    flex-basis: 45%; } }
+
+@media (max-width: 450px) {
+  #portfolio .portfolio-c .stats-wrap .stats {
+    flex-basis: 100%; } }
