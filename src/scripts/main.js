@@ -11,9 +11,9 @@ let controller = {
         let sections = {};
 
         document.querySelectorAll(".section").forEach((e) => {
-            sections[e.id] = e.offsetTop -50;
+            sections[e.id] = e.offsetTop - 50;
         });
-        
+
         let changeNavBackground = () => {
             let scrollPosition = document.documentElement.scrollTop
                 || document.body.scrollTop;
@@ -42,26 +42,27 @@ let controller = {
         window.addEventListener('resize', controller.scrollSpy)
     },
     slider: () => {
-        let sliderFunct = (slideClass) =>{
-           new Swiper(slideClass, {
-            direction: 'horizontal',
+        let swiper1 = new Swiper(".slider-1", {
             loop: true,
-            // If we need pagination
-            pagination: {
-              el: '.swiper-pagination',
-            },
-            // Navigation arrows
             navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             }
-           })
+        })
+        let swiper2 = new Swiper(".slider-2", {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        })
+        let updateFunct = () =>{
+            swiper1.update();
+            swiper2.update();
         }
-        sliderFunct(".slider-1");
-     
-        window.addEventListener('load', controller.slider)
-        window.addEventListener('resize', controller.slider)
-        window.addEventListener('orientationchange', controller.slider)
+        window.addEventListener('resize',updateFunct)
+        window.addEventListener('load', updateFunct)
+        window.addEventListener('orientationchange', updateFunct)
     },
     navbarToggler: () => {
         if (window.innerWidth <= 945) {
@@ -114,7 +115,7 @@ let controller = {
         });
 
     },
-    wowAnimations: () =>{
+    wowAnimations: () => {
         new WOW().init();
     }
 
@@ -122,7 +123,7 @@ let controller = {
 
 
 window.onload = () => {
-    
+
     controller.init();
 }
 

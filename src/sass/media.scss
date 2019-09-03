@@ -3,22 +3,22 @@
     @content;
   }
 }
-.head-title-content{
+.head-title-content {
   h1 {
-    @include breakpoint(max, width, 945px){
-      font-size:1.7rem;
+    @include breakpoint(max, width, 945px) {
+      font-size: 1.7rem;
     }
   }
   p {
-        @include breakpoint(max, width, 945px){
-      font-size:0.9rem;
+    @include breakpoint(max, width, 945px) {
+      font-size: 0.9rem;
       padding: 0 1rem;
     }
   }
   .bar {
     width: 15%;
     margin: 1.6rem auto 3rem auto;
-    @include breakpoint(max, width, 945px){
+    @include breakpoint(max, width, 945px) {
       width: 40%;
     }
   }
@@ -156,47 +156,23 @@
 }
 #home {
   .slider-home {
-    .slideshow-wrapper {
-      @include breakpoint(max, width, 999px) {
-        max-width: 700px;
-      }
+    .swiper-button-prev {
       @include breakpoint(max, width, 700px) {
-        width: 400px;
+        font-size: 1.4rem;
       }
-      @include breakpoint(max, width, 400px) {
-        width: 300px;
+    }
+    .swiper-button-next {
+      @include breakpoint(max, width, 700px) {
+        font-size: 1.4rem;
       }
-      .slideshowHome {
-        @include breakpoint(max, width, 999px) {
-          left: -700px;
-        }
-        @include breakpoint(max, width, 700px) {
-          left: -400px;
-        }
-        @include breakpoint(max, width, 400px) {
-          left: -300px;
-        }
-        .slide {
-          
-          @include breakpoint(max, width, 999px) {
-            width: 700px;
-          }
-          @include breakpoint(max, width, 700px) {
-            width: 400px;
-          }
-          @include breakpoint(max, width, 400px) {
-            width: 300px;
-          }
+    }
+    .slider-1 {
+      .swiper-wrapper {
+        .swiper-slide {
           .container {
-            @include breakpoint(max, width, 945px) {
-              height: 80%;
+            @include breakpoint(max, width, 800px) {
+              width: 80%;
             }
-        
-            @include breakpoint(max, width, 500px) {
-              height: 80%;
-              width: 90%;
-            }
-        
             h3 {
               @include breakpoint(max, width, 1450px) {
                 @include breakpoint(max, height, 800px) {
@@ -232,7 +208,7 @@
                 font-size: 3.3rem;
                 margin: 0 0 0.8rem 0;
               }
-        
+
               @include breakpoint(max, width, 1450px) {
                 font-size: 3.5rem;
               }
@@ -273,7 +249,6 @@
             }
             .home-btns {
               .btn-primary {
-                margin-right: 0.6rem;
                 @include breakpoint(max, width, 1450px) {
                   @include breakpoint(max, height, 800px) {
                     font-size: 0.8rem;
@@ -284,7 +259,7 @@
                   font-size: 0.8rem;
                   padding: 0.6rem 1.2rem;
                 }
-        
+
                 @include breakpoint(max, width, 500px) {
                   margin-right: 0.2rem;
                   font-size: 0.6rem;
@@ -318,36 +293,24 @@
               }
             }
           }
+        }
       }
     }
-   
-  }
-  .slideshow-nav {
-    .prev {
-      @include breakpoint(max, width, 700px) {
-        font-size: 1.4rem;
-      }
-    }
-    .next {
-      @include breakpoint(max, width, 700px) {
-        font-size: 1.4rem;
-      }
-    }
-    
   }
 }
-  .anchorBtn {
-    @include breakpoint(max, width, 700px) {
+
+.anchorBtn {
+  @include breakpoint(max, width, 700px) {
+    width: 40px;
+    height: 40px;
+    &:before {
+      content: "";
       width: 40px;
       height: 40px;
-      &:before {
-        content: "";
-        width: 40px;
-        height: 40px;
-      }
     }
   }
 }
+
 #about {
   .about-a {
     display: grid;
@@ -489,7 +452,7 @@
 }
 
 #portfolio {
-  .portfolio-a{
+  .portfolio-a {
     .button-group {
       margin-bottom: 3rem;
       color: #555;
@@ -515,42 +478,34 @@
 
   .portfolio-b {
     .case-study-content {
-
-        @include breakpoint(max, width, 700px){
-          position: relative;
-          right: 0;
-          left: 0;
-          margin: 0 auto;
-        }
+      @include breakpoint(max, width, 700px) {
+        position: relative;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+      }
       .slider-caseStudy {
-        @include breakpoint(max, width, 700px){
+        @include breakpoint(max, width, 700px) {
           position: absolute;
           top: 0;
           margin: auto 0;
           background: rgba($color: #fff, $alpha: 0.85);
         }
-        .slideshow-wrapper {
+        .slider-2 {
           @include breakpoint(max, width, 1180px) {
             width: 420px;
             height: 500px;
           }
-          @include breakpoint(max, width, 400px){
+          @include breakpoint(max, width, 400px) {
             width: 320px;
           }
-          .slideshow {
-            @include breakpoint(max, width, 1180px) {
-              left: -420px;
-            }
-            @include breakpoint(max, width, 400px){
-              left: -320px;
-            }
-            .slide {
+          .swiper-wrapper {
+            .swiper-slide {
               @include breakpoint(max, width, 1180px) {
                 width: 420px;
                 height: 500px;
-               
               }
-              @include breakpoint(max, width, 400px){
+              @include breakpoint(max, width, 400px) {
                 width: 320px;
               }
               span {
@@ -566,7 +521,7 @@
                 }
               }
               h1 {
-                @include breakpoint(max, width, 1180px){
+                @include breakpoint(max, width, 1180px) {
                   margin: 1rem 0;
                   font-size: 1rem;
                 }
@@ -576,28 +531,18 @@
               }
               p {
                 color: #777;
-                @include breakpoint(max, width, 1180px){
+                @include breakpoint(max, width, 1180px) {
                   margin: 1.3rem 0;
                   font-size: 0.8rem;
-
                 }
-
               }
               .btn-primary {
                 @include breakpoint(max, width, 1180px) {
                   margin-bottom: 1.5rem;
-                  font-size:0.8rem;
+                  font-size: 0.8rem;
                   padding: 0.5rem 1.7rem;
                 }
               }
-            }
-          }
-          .slideshow-nav {
-            @include breakpoint(max, width, 1180px) {
-              width: 420px;
-            }
-            @include breakpoint(max, width, 400px){
-              width: 320px;
             }
           }
         }
@@ -608,12 +553,12 @@
           width: 420px;
           height: 600px;
         }
-        @include breakpoint(max, width, 700px){
+        @include breakpoint(max, width, 700px) {
           width: 420px;
           height: 500px;
           margin-left: 0;
         }
-        @include breakpoint(max, width, 400px){
+        @include breakpoint(max, width, 400px) {
           width: 320px;
         }
       }

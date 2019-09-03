@@ -202,29 +202,27 @@ ul {
       height: 95vh;
       overflow: hidden;
       position: relative; }
-      #home .slider-home .slider-1 .swiper-wrapper {
-        display: flex; }
-        #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container {
-          height: 100%;
-          width: 100%;
-          color: #dadada; }
-          #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container h3 {
-            font-size: 1.5rem;
-            font-weight: 450;
-            letter-spacing: 1px; }
-          #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container h1 {
-            margin: 0 0 1rem 0;
-            font-size: 5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px; }
-          #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container p {
-            width: 70%;
-            margin-top: 1.5rem;
-            margin-bottom: 4rem; }
-          #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container .home-btns .btn-primary {
-            margin-right: 0.6rem; }
-          #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container .home-btns .btn-outline-primary {
-            margin-left: 0.6rem; }
+      #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container {
+        height: 100%;
+        width: 100%;
+        color: #dadada; }
+        #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container h3 {
+          font-size: 1.5rem;
+          font-weight: 450;
+          letter-spacing: 1px; }
+        #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container h1 {
+          margin: 0 0 1rem 0;
+          font-size: 5rem;
+          text-transform: uppercase;
+          letter-spacing: 2px; }
+        #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container p {
+          width: 70%;
+          margin-top: 1.5rem;
+          margin-bottom: 4rem; }
+        #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container .home-btns .btn-primary {
+          margin-right: 0.6rem; }
+        #home .slider-home .slider-1 .swiper-wrapper .swiper-slide .container .home-btns .btn-outline-primary {
+          margin-left: 0.6rem; }
     #home .slider-home .swiper-button-prev,
     #home .slider-home .swiper-button-next {
       position: absolute;
@@ -509,73 +507,55 @@ ul {
       position: relative;
       background: #fff;
       z-index: 0; }
-      #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper {
+      #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 {
         box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.32);
         width: 620px;
         height: 600px;
-        position: relative;
         overflow: hidden; }
-        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow {
-          left: -620px;
-          width: 999999px;
-          position: absolute; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide {
-            width: 620px;
-            height: 600px;
-            float: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span {
-              display: inline-block;
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide span {
+            display: inline-block;
+            background: #e74c3c;
+            width: 70px;
+            height: 70px;
+            transform: rotate(-45deg);
+            margin-bottom: 2rem; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide span i {
+              transform: rotate(45deg);
+              margin-top: 1.2rem;
+              color: #fff; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide h1 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin: 2rem 0; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide hr {
+            width: 15%; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide p {
+            color: #777;
+            font-size: 0.9rem;
+            padding: 0 2rem;
+            margin: 2rem 0; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide .btn-primary {
+            margin-bottom: 3rem; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination {
+          bottom: 30px; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background: #aaa;
+            transition: all 0.4s; }
+            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet-active {
               background: #e74c3c;
-              width: 70px;
-              height: 70px;
-              transform: rotate(-45deg);
-              margin-bottom: 2rem; }
-              #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide span i {
-                transform: rotate(45deg);
-                margin-top: 1.2rem;
-                color: #fff; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide h1 {
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              transition: all 0.3s;
-              margin: 2rem 0; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide hr {
-              width: 15%; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide p {
-              color: #777;
-              font-size: 0.9rem;
-              padding: 0 2rem;
-              margin: 2rem 0; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow .slide .btn-primary {
-              margin-bottom: 3rem; }
-        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav {
-          width: 620px;
-          position: absolute;
-          bottom: 5%; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul {
-            margin: 0;
-            padding: 0;
-            text-align: center; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul li {
-              list-style-type: none;
-              display: inline-block; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul .dot1 {
-              width: 10px;
-              height: 10px;
-              margin: 0 5px;
-              border-radius: 50%;
-              background: #ccc;
-              transition: all 0.4s;
-              cursor: pointer; }
-              #portfolio .portfolio-b .case-study-content .slider-caseStudy .slideshow-wrapper .slideshow-nav ul .dot1.active {
-                background: #e74c3c;
-                width: 12px;
-                height: 12px; }
+              width: 12px;
+              height: 12px; }
     #portfolio .portfolio-b .case-study-content .case-img {
       z-index: -1;
       position: relative;

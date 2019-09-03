@@ -25,7 +25,6 @@
         overflow: hidden;
         position: relative;
         .swiper-wrapper {
-          display: flex;
           .swiper-slide {
             .container {
               height: 100%;
@@ -59,7 +58,6 @@
           }
         }
       }
-
         .swiper-button-prev,
         .swiper-button-next {
           position: absolute;

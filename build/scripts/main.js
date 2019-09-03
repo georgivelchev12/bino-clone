@@ -39,26 +39,29 @@ var controller = {
     window.addEventListener('resize', controller.scrollSpy);
   },
   slider: function slider() {
-    var sliderFunct = function sliderFunct(slideClass) {
-      new Swiper(slideClass, {
-        direction: 'horizontal',
-        loop: true,
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
-      });
+    var swiper1 = new Swiper(".slider-1", {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+    var swiper2 = new Swiper(".slider-2", {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+
+    var updateFunct = function updateFunct() {
+      swiper1.update();
+      swiper2.update();
     };
 
-    sliderFunct(".slider-1");
-    window.addEventListener('load', controller.slider);
-    window.addEventListener('resize', controller.slider);
-    window.addEventListener('orientationchange', controller.slider);
+    window.addEventListener('resize', updateFunct);
+    window.addEventListener('load', updateFunct);
+    window.addEventListener('orientationchange', updateFunct);
   },
   navbarToggler: function navbarToggler() {
     if (window.innerWidth <= 945) {
