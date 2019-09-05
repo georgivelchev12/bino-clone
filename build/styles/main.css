@@ -13,7 +13,8 @@ a {
   text-decoration: none; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
 
 .container {
   width: 50%;
@@ -75,6 +76,23 @@ ul {
     background: #eee;
     color: #444; }
 
+.btn-secondary {
+  display: inline-block;
+  border: none;
+  background: #999;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 550;
+  letter-spacing: 0.8px;
+  padding: 0.8rem 1.7rem;
+  border: 1px solid #999;
+  transition: all 0.3s;
+  cursor: pointer; }
+  .btn-secondary:hover {
+    background: transparent;
+    color: #999; }
+
 .openbtn {
   display: none; }
 
@@ -93,21 +111,22 @@ ul {
 .is-checked {
   color: #e74c3c; }
 
-.head-title-content h1 {
-  font-size: 2rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-top: 4.5rem;
-  margin-bottom: 1.4rem;
-  padding-left: 1rem; }
-
-.head-title-content p {
-  line-height: 1.8;
-  font-size: 1rem; }
-
-.head-title-content .bar {
-  width: 15%;
-  margin: 1.6rem auto 3rem auto; }
+.head-title-content {
+  text-align: center;
+  color: #555; }
+  .head-title-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4.5rem;
+    margin-bottom: 1.4rem;
+    padding-left: 1rem; }
+  .head-title-content p {
+    line-height: 1.8;
+    font-size: 1rem; }
+  .head-title-content .bar {
+    width: 15%;
+    margin: 1.6rem auto 3rem auto; }
 
 #navbar {
   z-index: 5;
@@ -494,80 +513,77 @@ ul {
     #portfolio .portfolio-a .grid .element-item:hover a {
       opacity: 1; }
 
-#portfolio .portfolio-b {
+#portfolio .portfolio-b .case-study-content {
+  display: flex;
+  align-items: center;
   text-align: center;
-  color: #555; }
-  #portfolio .portfolio-b .case-study-content {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 5rem 0 10rem; }
-    #portfolio .portfolio-b .case-study-content .slider-caseStudy {
-      position: relative;
-      background: #fff;
-      z-index: 0; }
-      #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 {
-        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.32);
-        width: 620px;
-        height: 600px;
-        overflow: hidden; }
-        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide span {
-            display: inline-block;
+  justify-content: center;
+  margin: 5rem 0 10rem; }
+  #portfolio .portfolio-b .case-study-content .slider-caseStudy {
+    position: relative;
+    background: #fff;
+    z-index: 0; }
+    #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 {
+      box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.32);
+      width: 620px;
+      height: 600px;
+      overflow: hidden; }
+      #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide span {
+          display: inline-block;
+          background: #e74c3c;
+          width: 70px;
+          height: 70px;
+          transform: rotate(-45deg);
+          margin-bottom: 2rem; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide span i {
+            transform: rotate(45deg);
+            margin-top: 1.2rem;
+            color: #fff; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide h1 {
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s;
+          margin: 2rem 0; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide hr {
+          width: 15%; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide p {
+          color: #777;
+          font-size: 0.9rem;
+          padding: 0 2rem;
+          margin: 2rem 0; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide .btn-primary {
+          margin-bottom: 3rem; }
+      #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination {
+        bottom: 30px; }
+        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          border-radius: 50%;
+          background: #aaa;
+          transition: all 0.4s; }
+          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet-active {
             background: #e74c3c;
-            width: 70px;
-            height: 70px;
-            transform: rotate(-45deg);
-            margin-bottom: 2rem; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide span i {
-              transform: rotate(45deg);
-              margin-top: 1.2rem;
-              color: #fff; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide h1 {
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-            margin: 2rem 0; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide hr {
-            width: 15%; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide p {
-            color: #777;
-            font-size: 0.9rem;
-            padding: 0 2rem;
-            margin: 2rem 0; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-wrapper .swiper-slide .btn-primary {
-            margin-bottom: 3rem; }
-        #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination {
-          bottom: 30px; }
-          #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            border-radius: 50%;
-            background: #aaa;
-            transition: all 0.4s; }
-            #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet-active {
-              background: #e74c3c;
-              width: 12px;
-              height: 12px; }
-    #portfolio .portfolio-b .case-study-content .case-img {
-      z-index: -1;
-      position: relative;
-      margin-left: -80px;
-      width: 600px;
-      height: 700px;
-      background: url("/img/case-study.jpg") no-repeat center center/cover; }
+            width: 12px;
+            height: 12px; }
+  #portfolio .portfolio-b .case-study-content .case-img {
+    z-index: -1;
+    position: relative;
+    margin-left: -80px;
+    width: 600px;
+    height: 700px;
+    background: url("/img/case-study.jpg") no-repeat center center/cover; }
 
 #portfolio .portfolio-c {
   background: url("/img/stats.jpg") no-repeat center center/cover;
   padding: 100px 0 140px;
-  margin: 6rem 0;
+  margin: 5rem 0 3rem;
   color: #eee;
   position: relative; }
   #portfolio .portfolio-c:before {
@@ -607,6 +623,145 @@ ul {
         font-weight: bold; }
       #portfolio .portfolio-c .stats-wrap .stats p {
         font-size: 1.1rem; }
+
+#pricing {
+  color: #999; }
+  #pricing .container {
+    width: 97%;
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    #pricing .container .package {
+      background: #f4f5f9;
+      flex-basis: 32%;
+      transition: all 0.4s;
+      margin-bottom: 1.5rem; }
+      #pricing .container .package-top {
+        background: #999;
+        color: #fff;
+        padding: 2.5rem 0 3.5rem;
+        transition: all 0.4s; }
+        #pricing .container .package-top h1 {
+          font-size: 2rem;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          margin-top: 0;
+          margin-bottom: 2.5rem; }
+      #pricing .container .package-bottom {
+        padding-bottom: 80px; }
+        #pricing .container .package-bottom .price-num {
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: -70px;
+          width: 140px;
+          height: 140px;
+          background: #fff;
+          border-radius: 50%;
+          border: 4px solid rgba(51, 51, 51, 0.1);
+          animation: glowing 800ms infinite;
+          transition: all 0.4s; }
+          #pricing .container .package-bottom .price-num h1 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 0; }
+          #pricing .container .package-bottom .price-num p {
+            margin-top: 0; }
+        #pricing .container .package-bottom .package-list {
+          margin: 50px 0 0; }
+          #pricing .container .package-bottom .package-list li {
+            margin: 0.9rem 0; }
+        #pricing .container .package-bottom .btn-secondary {
+          margin-top: 2.5rem; }
+      #pricing .container .package:nth-child(2) {
+        transform: translateY(-0.2rem);
+        box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.5); }
+        #pricing .container .package:nth-child(2) .package-top {
+          background: #e74c3c; }
+        #pricing .container .package:nth-child(2) .package-bottom .price-num {
+          color: #e74c3c; }
+        #pricing .container .package:nth-child(2) .btn-secondary {
+          background: #e74c3c;
+          border: 1px solid #e74c3c; }
+          #pricing .container .package:nth-child(2) .btn-secondary:hover {
+            background: transparent;
+            color: #e74c3c; }
+      #pricing .container .package:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.5); }
+        #pricing .container .package:hover .package-top {
+          background: #e74c3c; }
+        #pricing .container .package:hover .package-bottom .price-num {
+          color: #e74c3c; }
+        #pricing .container .package:hover .btn-secondary {
+          background: #e74c3c;
+          border: 1px solid #e74c3c; }
+          #pricing .container .package:hover .btn-secondary:hover {
+            background: transparent;
+            color: #e74c3c; }
+
+#team {
+  background: url("/img/team-line.png") center no-repeat, url("/img/team-img.jpg") center bottom no-repeat;
+  margin-top: 100px;
+  padding: 45px 0 470px; }
+  #team .head-title-content {
+    color: #fff; }
+    #team .head-title-content h1 {
+      margin-top: 0; }
+    #team .head-title-content .bar {
+      margin-bottom: 0; }
+  #team .team {
+    position: relative;
+    min-width: 300px;
+    max-width: 1200px;
+    margin: 0 auto; }
+    #team .team .team-img1 {
+      position: absolute;
+      left: 0%;
+      bottom: -226px;
+      width: 65px;
+      height: 65px;
+      border: 2px solid #e74c3c;
+      border-radius: 50%;
+      background: url("/img/team1.jpg") no-repeat center center/cover; }
+    #team .team .team-img2 {
+      position: absolute;
+      left: 25%;
+      bottom: -175px;
+      width: 65px;
+      height: 65px;
+      border: 2px solid #e74c3c;
+      border-radius: 50%;
+      background: url("/img/team2.jpg") no-repeat center center/cover; }
+    #team .team .team-img3 {
+      position: absolute;
+      left: 50%;
+      bottom: -174px;
+      width: 65px;
+      height: 65px;
+      border: 2px solid #e74c3c;
+      border-radius: 50%;
+      background: url("/img/team3.jpg") no-repeat center center/cover; }
+    #team .team .team-img4 {
+      position: absolute;
+      left: 75%;
+      bottom: -208px;
+      width: 65px;
+      height: 65px;
+      border: 2px solid #e74c3c;
+      border-radius: 50%;
+      background: url("/img/team4.jpg") no-repeat center center/cover; }
+    #team .team .team-img5 {
+      position: absolute;
+      left: 100%;
+      bottom: -128px;
+      width: 65px;
+      height: 65px;
+      border: 3px solid #e74c3c;
+      border-radius: 50%;
+      background: url("/img/team5.jpg") no-repeat center center/cover; }
 
 @keyframes glowing {
   0% {

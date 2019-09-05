@@ -507,3 +507,17 @@
 @media (max-width: 450px) {
   #portfolio .portfolio-c .stats-wrap .stats {
     flex-basis: 100%; } }
+
+@media (max-width: 900px) {
+  #pricing .container {
+    justify-content: center;
+    width: 100%; } }
+
+@media (max-width: 900px) {
+  #pricing .container .package {
+    flex-basis: 45%;
+    margin: 20px 2.5%; } }
+
+@media (max-width: 580px) {
+  #pricing .container .package {
+    flex-basis: 100%; } }

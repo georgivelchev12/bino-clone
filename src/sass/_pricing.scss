@@ -1,0 +1,107 @@
+#pricing {
+  color: #999;
+  .container {
+    width: 97%;
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .package {
+      background: #f4f5f9;
+      flex-basis: 32%;
+      transition: all 0.4s;
+      margin-bottom: 1.5rem;
+      &-top {
+        background: #999;
+        color: #fff;
+        padding: 2.5rem 0 3.5rem;
+        transition: all 0.4s;
+        h1 {
+          font-size: 2rem;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          margin-top: 0;
+          margin-bottom: 2.5rem;
+        }
+      }
+      &-bottom {
+        padding-bottom: 80px;
+        .price-num {
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: -70px;
+          width: 140px;
+          height: 140px;
+          background: #fff;
+          border-radius: 50%;
+          border: 4px solid rgba($color: #333, $alpha: 0.1);
+          animation: glowing 800ms infinite;
+          transition: all 0.4s;
+          h1 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 0;
+          }
+          p {
+            margin-top: 0;
+          }
+
+        }
+        .package-list {
+          margin: 50px 0 0;
+          li {
+            margin: 0.9rem 0;
+          }
+        }
+        .btn-secondary{
+          margin-top: 2.5rem;
+        }
+      }
+      &:nth-child(2) {
+        transform: translateY(-0.2rem);
+        box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.5);
+        .package-top {
+          background: #e74c3c;
+        }
+        .package-bottom{
+            .price-num{
+                color:#e74c3c;
+            }
+        }
+        .btn-secondary{
+            background: #e74c3c;
+            border: 1px solid #e74c3c;
+            &:hover {
+                background: transparent;
+                color: #e74c3c;
+              }
+          }
+      }
+      &:hover{
+        transform: translateY(-0.2rem);
+        box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.5);
+        .package-top {
+          background: #e74c3c;
+        }
+        .package-bottom{
+            .price-num{
+                color:#e74c3c;
+            }
+        }
+        .btn-secondary{
+            background: #e74c3c;
+            border: 1px solid #e74c3c;
+            &:hover {
+                background: transparent;
+                color: #e74c3c;
+              }
+          }
+      }
+    }
+  }
+}
+
+
+

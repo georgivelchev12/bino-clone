@@ -564,22 +564,38 @@
       }
     }
   }
-  .portfolio-c{
-    @include breakpoint(max, width, 880px){
-      padding: 70px 0 100px;;
+  .portfolio-c {
+    @include breakpoint(max, width, 880px) {
+      padding: 70px 0 100px;
     }
-    .stats-wrap{
-      @include breakpoint(max, width, 880px){
+    .stats-wrap {
+      @include breakpoint(max, width, 880px) {
         justify-content: center;
       }
-      .stats{
-        @include breakpoint(max, width, 880px){
+      .stats {
+        @include breakpoint(max, width, 880px) {
           flex-basis: 45%;
         }
-        @include breakpoint(max, width, 450px){
+        @include breakpoint(max, width, 450px) {
           flex-basis: 100%;
         }
       }
+    }
+  }
+}
+
+#pricing .container {
+  @include breakpoint(max, width, 900px) {
+    justify-content: center;
+    width: 100%;
+  }
+  .package {
+    @include breakpoint(max, width, 900px) {
+      flex-basis: 45%;
+      margin: 20px 2.5%;
+    }
+    @include breakpoint(max, width, 580px){
+      flex-basis: 100%;
     }
   }
 }
