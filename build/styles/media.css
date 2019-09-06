@@ -521,3 +521,52 @@
 @media (max-width: 580px) {
   #pricing .container .package {
     flex-basis: 100%; } }
+
+@media (max-width: 1100px) {
+  #team {
+    background: url("/img/team-img.jpg") center bottom no-repeat;
+    margin-top: 100px;
+    padding: 45px 0 370px; } }
+
+@media (max-width: 750px) {
+  #team .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 1rem; }
+    #team .team h2 {
+      font-size: 1.4rem; }
+    #team .team p {
+      margin-top: 0;
+      color: #fff;
+      font-size: 0.8rem; }
+    #team .team .team-person {
+      flex-basis: 20%; } }
+
+@media (max-width: 1100px) {
+  #team .team .teamImg {
+    bottom: -200px; } }
+
+@media (max-width: 750px) {
+  #team .team .teamImg {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: -150px; }
+    #team .team .teamImg:before {
+      content: "";
+      display: none; }
+    #team .team .teamImg:after {
+      content: "";
+      display: none; } }
+
+@media (max-width: 1100px) {
+  #team .team .teamInfo-opacity {
+    bottom: -320px; } }
+
+@media (max-width: 750px) {
+  #team .team .teamInfo-opacity {
+    position: relative;
+    left: auto;
+    right: auto;
+    opacity: 1; } }
