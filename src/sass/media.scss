@@ -607,12 +607,21 @@
     padding: 45px 0 370px;
   }
 
+  @include breakpoint(max, width, 750px){
+    padding: 45px 0 280px;
+  }
+  @include breakpoint(max, width, 700px){
+    padding: 45px 0 50px;
+    margin-top:50px;
+  }
   .team {
     @include breakpoint(max, width, 750px) {
       display: flex;
-      flex-wrap:wrap;
-      justify-content: space-between;
-      margin: 0 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+      
+
       h2 {
         font-size: 1.4rem;
       }
@@ -621,21 +630,27 @@
         color: #fff;
         font-size: 0.8rem;
       }
-      .team-person{
-
+    }
+    .team-person {
+      @include breakpoint(max, width, 750px) {
         flex-basis: 20%;
+        position: relative;
+      }
+      @include breakpoint(max, width, 700px) {
+        flex-basis: 45%;
+        margin: 1rem 0 ;
       }
     }
-
     .teamImg {
       @include breakpoint(max, width, 1100px) {
         bottom: -200px;
       }
       @include breakpoint(max, width, 750px) {
         position: relative;
-        left: auto;
-        right: auto;
-        bottom: -150px;
+        left: 0;
+        top: 0;
+        right:0;
+        margin: 0 auto;
         &:before {
           content: "";
           display: none;
@@ -649,13 +664,24 @@
     .teamInfo-opacity {
       @include breakpoint(max, width, 1100px) {
         bottom: -320px;
+
       }
       @include breakpoint(max, width, 750px) {
         position: relative;
         left: auto;
         right: auto;
+        margin: 0 auto;
         opacity: 1;
+        bottom: -1rem;
+        h2 {
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+        }
+        p {
+          font-size: 0.75rem;
+        }
       }
+
     }
   }
 }
