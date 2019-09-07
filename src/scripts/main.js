@@ -128,7 +128,7 @@ let controller = {
         });
     },
     wowAnimations: () => {
-        new WOW().init();
+        // new WOW().init();
     }
 
 }

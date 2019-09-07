@@ -125,8 +125,7 @@ var controller = {
       });
     });
   },
-  wowAnimations: function wowAnimations() {
-    new WOW().init();
+  wowAnimations: function wowAnimations() {// new WOW().init();
   }
 };
 

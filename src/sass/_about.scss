@@ -9,7 +9,7 @@
       grid-gap: 2rem;
       padding: 5rem 0;
       width: 80%;
-      margin: 0 auto 5rem auto;
+      margin: 0 auto 1.5rem auto;
       color: #555;
       .about-item {
         span {
@@ -57,9 +57,9 @@
       }
     }
     .about-b {
-      padding: 0 1rem 3rem 1rem;
+      padding: 7rem 1rem 3rem 1rem;
       display: flex;
-  
+      border-top: 1px solid #eee;
       max-width: 1200px;
       margin: 0 auto 5rem auto;
       color: #555;

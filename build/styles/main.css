@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cantarell:400i&display=swap");
 html {
   box-sizing: border-box;
   scroll-behavior: smooth; }
@@ -318,7 +319,7 @@ ul {
     grid-gap: 2rem;
     padding: 5rem 0;
     width: 80%;
-    margin: 0 auto 5rem auto;
+    margin: 0 auto 1.5rem auto;
     color: #555; }
     #about .about-a .about-item span {
       display: inline-block;
@@ -353,8 +354,9 @@ ul {
     #about .about-a .about-item:hover h2 {
       color: #e74c3c; }
   #about .about-b {
-    padding: 0 1rem 3rem 1rem;
+    padding: 7rem 1rem 3rem 1rem;
     display: flex;
+    border-top: 1px solid #eee;
     max-width: 1200px;
     margin: 0 auto 5rem auto;
     color: #555; }
@@ -562,6 +564,7 @@ ul {
       #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination {
         bottom: 30px; }
         #portfolio .portfolio-b .case-study-content .slider-caseStudy .slider-2 .swiper-pagination .swiper-pagination-bullet {
+          outline: none;
           width: 10px;
           height: 10px;
           margin: 0 5px;
@@ -702,37 +705,37 @@ ul {
             background: transparent;
             color: #e74c3c; }
 
-#team {
+#team .team-a {
   background: url("/img/team-line.png") center no-repeat, url("/img/team-img.jpg") center bottom no-repeat;
   margin-top: 100px;
   padding: 45px 0 470px; }
-  #team .head-title-content {
+  #team .team-a .head-title-content {
     color: #fff; }
-    #team .head-title-content h1 {
+    #team .team-a .head-title-content h1 {
       margin-top: 0; }
-    #team .head-title-content .bar {
+    #team .team-a .head-title-content .bar {
       margin-bottom: 0; }
-  #team .team {
+  #team .team-a .team {
     position: relative;
     min-width: 300px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center; }
-    #team .team h2 {
+    #team .team-a .team h2 {
       color: #e74c3c;
       letter-spacing: 1.5px;
       margin-bottom: 0.5rem;
       margin-top: 0; }
-    #team .team p {
+    #team .team-a .team p {
       margin-top: 0;
       color: #fff;
       font-size: 0.9rem; }
-    #team .team .teamImg {
+    #team .team-a .team .teamImg {
       width: 65px;
       height: 65px;
       border: 2px solid #e74c3c;
       border-radius: 50%; }
-      #team .team .teamImg:before {
+      #team .team-a .team .teamImg:before {
         content: "";
         position: absolute;
         top: 0;
@@ -746,7 +749,7 @@ ul {
         background: rgba(231, 76, 60, 0.5);
         opacity: 0;
         transition: opacity 0.4s; }
-      #team .team .teamImg:after {
+      #team .team-a .team .teamImg:after {
         content: "";
         position: absolute;
         bottom: -42px;
@@ -756,58 +759,151 @@ ul {
         background: #aaa;
         opacity: 0;
         transition: opacity 0.4s; }
-      #team .team .teamImg:hover:after, #team .team .teamImg:hover:before,
-      #team .team .teamImg:hover + .teamInfo-opacity {
+      #team .team-a .team .teamImg:hover:after, #team .team-a .team .teamImg:hover:before,
+      #team .team-a .team .teamImg:hover + .teamInfo-opacity {
         opacity: 1; }
-    #team .team .teamInfo-opacity {
+    #team .team-a .team .teamInfo-opacity {
       opacity: 0;
       transition: opacity 0.4s; }
-    #team .team .team-img1 {
+    #team .team-a .team .team-img1 {
       position: absolute;
       left: 5%;
       bottom: -216px;
       background: url("/img/team1.jpg") no-repeat center center/cover; }
-    #team .team .team-info1 {
+    #team .team-a .team .team-info1 {
       position: absolute;
       left: 2.5%;
       bottom: -350px; }
-    #team .team .team-img2 {
+    #team .team-a .team .team-img2 {
       position: absolute;
       left: 25%;
       bottom: -175px;
       background: url("/img/team2.jpg") no-repeat center center/cover; }
-    #team .team .team-info2 {
+    #team .team-a .team .team-info2 {
       position: absolute;
       left: 23%;
       bottom: -310px; }
-    #team .team .team-img3 {
+    #team .team-a .team .team-img3 {
       position: absolute;
       left: 47%;
       bottom: -174px;
       background: url("/img/team3.jpg") no-repeat center center/cover; }
-    #team .team .team-info3 {
+    #team .team-a .team .team-info3 {
       position: absolute;
       left: 44.5%;
       bottom: -305px; }
-    #team .team .team-img4 {
+    #team .team-a .team .team-img4 {
       position: absolute;
       right: 25%;
       bottom: -208px;
       background: url("/img/team4.jpg") no-repeat center center/cover; }
-    #team .team .team-info4 {
+    #team .team-a .team .team-info4 {
       position: absolute;
       right: 21.7%;
       bottom: -340px; }
-    #team .team .team-img5 {
+    #team .team-a .team .team-img5 {
       position: absolute;
       right: 5%;
       bottom: -190px;
       background: url("/img/team5.jpg") no-repeat center center/cover; }
-    #team .team .team-info5 {
+    #team .team-a .team .team-info5 {
       position: absolute;
       right: 2%;
       width: 130px;
       bottom: -315px; }
+
+#team .team-b {
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 1rem auto; }
+  #team .team-b .integrations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem; }
+    #team .team-b .integrations-item {
+      justify-content: center;
+      margin: 1rem 0;
+      background: #fff;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      flex-basis: 18%;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1); }
+      #team .team-b .integrations-item div {
+        align-self: center; }
+        #team .team-b .integrations-item div img {
+          max-width: 100%; }
+
+#blog {
+  margin-top: 6rem;
+  border-top: 1px solid #eee; }
+  #blog .blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    margin: 60px auto 0; }
+    #blog .blog-content .blog-item {
+      flex-basis: 50%;
+      display: flex;
+      flex-wrap: wrap; }
+      #blog .blog-content .blog-item:nth-child(3) .blog-img, #blog .blog-content .blog-item:nth-child(4) .blog-img {
+        order: 2; }
+      #blog .blog-content .blog-item:nth-child(3) .blog-text, #blog .blog-content .blog-item:nth-child(4) .blog-text {
+        order: 1; }
+        #blog .blog-content .blog-item:nth-child(3) .blog-text::before, #blog .blog-content .blog-item:nth-child(4) .blog-text::before {
+          content: "";
+          border-right: 30px solid transparent;
+          border-left: 25px solid #e74c3c;
+          left: auto;
+          right: -55px; }
+      #blog .blog-content .blog-item .blog-img {
+        flex-basis: 50%; }
+        #blog .blog-content .blog-item .blog-img img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      #blog .blog-content .blog-item .blog-text {
+        flex-basis: 50%;
+        padding: 25px 25px 25px 40px;
+        background-color: #e74c3c;
+        box-sizing: border-box;
+        position: relative;
+        text-align: left;
+        color: #fff;
+        line-height: 1.8; }
+        #blog .blog-content .blog-item .blog-text .blog-category {
+          font-size: 0.9rem; }
+        #blog .blog-content .blog-item .blog-text h2 {
+          margin-top: 0;
+          font-size: 1.6rem; }
+          #blog .blog-content .blog-item .blog-text h2:after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 44px;
+            background: #fff;
+            margin-top: 0.5rem; }
+        #blog .blog-content .blog-item .blog-text p {
+          font-size: 1rem; }
+        #blog .blog-content .blog-item .blog-text a {
+          color: #fff;
+          font-family: "Cantarell", sans-serif;
+          font-size: 1.2rem; }
+          #blog .blog-content .blog-item .blog-text a i {
+            margin-left: 0.3rem; }
+          #blog .blog-content .blog-item .blog-text a:hover {
+            border-bottom: 1px solid #fff; }
+        #blog .blog-content .blog-item .blog-text:before {
+          content: "";
+          border: 30px solid transparent;
+          border-right: 25px solid #e74c3c;
+          position: absolute;
+          top: 50%;
+          left: -55px;
+          transform: translateY(-50%); }
 
 @keyframes glowing {
   0% {

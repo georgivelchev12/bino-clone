@@ -601,92 +601,185 @@
 }
 
 #team {
-  @include breakpoint(max, width, 1100px) {
-    background: url("/img/team-img.jpg") center bottom no-repeat;
-    background-size: cover;
-    margin-top: 100px;
-    padding: 45px 0 370px;
-  }
+  .team-a {
+    @include breakpoint(max, width, 1100px) {
+      background: url("/img/team-img.jpg") center bottom no-repeat;
+      background-size: cover;
+      margin-top: 100px;
+      padding: 45px 0 370px;
+    }
 
-  @include breakpoint(max, width, 750px){
-    padding: 45px 0 60px;
-  }
-  @include breakpoint(max, width, 700px){
-    padding: 45px 0 50px;
-    margin-top:50px;
-  }
-
-  .team {
     @include breakpoint(max, width, 750px) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
-      
+      padding: 45px 0 60px;
+    }
+    @include breakpoint(max, width, 700px) {
+      padding: 45px 0 50px;
+      margin-top: 50px;
+    }
 
-      h2 {
-        font-size: 1.4rem;
-      }
-      p {
-        margin-top: 0;
-        color: #fff;
-        font-size: 0.8rem;
-      }
-    }
-    .team-person {
+    .team {
       @include breakpoint(max, width, 750px) {
-        flex-basis: 20%;
-        position: relative;
-      }
-      @include breakpoint(max, width, 700px) {
-        flex-basis: 45%;
-        margin: 1rem 0 ;
-      }
-      @include breakpoint(max, width, 400px){
-        flex-basis: 100%;
-      }
-    }
-    .teamImg {
-      @include breakpoint(max, width, 1100px) {
-        bottom: -200px;
-      }
-      @include breakpoint(max, width, 750px) {
-        position: relative;
-        left: 0;
-        top: 0;
-        right:0;
-        margin: 0 auto;
-        &:before {
-          content: "";
-          display: none;
-        }
-        &:after {
-          content: "";
-          display: none;
-        }
-      }
-    }
-    .teamInfo-opacity {
-      @include breakpoint(max, width, 1100px) {
-        bottom: -320px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
 
-      }
-      @include breakpoint(max, width, 750px) {
-        position: relative;
-        left: auto;
-        right: auto;
-        margin: 0 auto;
-        opacity: 1;
-        bottom: -1rem;
         h2 {
-          font-size: 1.2rem;
-          letter-spacing: 1px;
+          font-size: 1.4rem;
         }
         p {
-          font-size: 0.75rem;
+          margin-top: 0;
+          color: #fff;
+          font-size: 0.8rem;
         }
       }
+      .team-person {
+        @include breakpoint(max, width, 750px) {
+          flex-basis: 20%;
+          position: relative;
+        }
+        @include breakpoint(max, width, 700px) {
+          flex-basis: 45%;
+          margin: 1rem 0;
+        }
+        @include breakpoint(max, width, 400px) {
+          flex-basis: 100%;
+        }
+      }
+      .teamImg {
+        @include breakpoint(max, width, 1100px) {
+          bottom: -200px;
+        }
+        @include breakpoint(max, width, 750px) {
+          position: relative;
+          left: 0;
+          top: 0;
+          right: 0;
+          margin: 0 auto;
+          &:before {
+            content: "";
+            display: none;
+          }
+          &:after {
+            content: "";
+            display: none;
+          }
+        }
+      }
+      .teamInfo-opacity {
+        @include breakpoint(max, width, 1100px) {
+          bottom: -320px;
+        }
+        @include breakpoint(max, width, 750px) {
+          position: relative;
+          left: auto;
+          right: auto;
+          margin: 0 auto;
+          opacity: 1;
+          bottom: -1rem;
+          h2 {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+          }
+          p {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  .team-b {
+    .integrations {
+      @include breakpoint(max, width, 945px) {
+        justify-content: center;
+      }
+      &-item {
+        @include breakpoint(max, width, 945px) {
+          margin: 1rem 0.6rem;
+          flex-basis: 30%;
+        }
+        @include breakpoint(max, width, 645px) {
+          flex-basis: 45%;
+        }
+        @include breakpoint(max, width, 480px) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
 
+#blog {
+  .blog-content {
+    .blog-item {
+      @include breakpoint(max, width, 1000px) {
+        flex-basis: 100%;
+      }
+      &:nth-child(even) {
+        .blog-img {
+          @include breakpoint(max, width, 1000px) {
+            order: 1;
+            &:before {
+              right: auto;
+              left: -55px;
+              border: 30px solid transparent;
+              border-right: 25px solid #e74c3c;
+            }
+          }
+          @include breakpoint(max, width, 550px) {
+            order: 2;
+            flex-basis: 100%;
+          }
+        }
+        .blog-text {
+          @include breakpoint(max, width, 1000px) {
+            order: 2;
+            &:before {
+              right: auto;
+              left: -55px;
+              border: 30px solid transparent;
+              border-right: 25px solid #e74c3c;
+            }
+          }
+          @include breakpoint(max, width, 550px) {
+            order: 1;
+            flex-basis: 100%;
+          }
+        }
+      }
+      &:nth-child(odd) {
+        .blog-img {
+          @include breakpoint(max, width, 1000px) {
+            order: 2;
+            &:before {
+              right: auto;
+              left: -55px;
+              border: 30px solid transparent;
+              border-right: 25px solid #e74c3c;
+            }
+          }
+          @include breakpoint(max, width, 550px) {
+            flex-basis: 100%;
+          }
+        }
+        .blog-text {
+          @include breakpoint(max, width, 1000px) {
+            order: 1;
+            &:before {
+              right: -55px;
+              left: auto;
+              border: 30px solid transparent;
+              border-left: 25px solid #e74c3c;
+            }
+          }
+          @include breakpoint(max, width, 550px) {
+            flex-basis: 100%;
+            &:before {
+              border: none;
+            }
+          }
+        }
+      }
     }
   }
 }

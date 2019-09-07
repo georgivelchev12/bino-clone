@@ -1,132 +1,163 @@
 #team {
-  background: url("/img/team-line.png") center no-repeat,
-    url("/img/team-img.jpg") center bottom no-repeat;
-  margin-top: 100px;
-  padding: 45px 0 470px;
-  .head-title-content {
-    color: #fff;
-    h1 {
-      margin-top: 0;
+  .team-a {
+    background: url("/img/team-line.png") center no-repeat,
+      url("/img/team-img.jpg") center bottom no-repeat;
+    margin-top: 100px;
+    padding: 45px 0 470px;
+
+    .head-title-content {
+      color: #fff;
+      h1 {
+        margin-top: 0;
+      }
+      .bar {
+        margin-bottom: 0;
+      }
     }
-    .bar {
-      margin-bottom: 0;
+    .team {
+      position: relative;
+      min-width: 300px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        color: #e74c3c;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+      }
+      p {
+        margin-top: 0;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+
+      .teamImg {
+        width: 65px;
+        height: 65px;
+        border: 2px solid #e74c3c;
+        border-radius: 50%;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: rgba($color: #e74c3c, $alpha: 0.5);
+          opacity: 0;
+          transition: opacity 0.4s;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -42px;
+          left: 50%;
+          width: 1px;
+          height: 40px;
+          background: #aaa;
+          opacity: 0;
+          transition: opacity 0.4s;
+        }
+        &:hover:after,
+        &:hover:before,
+        &:hover + .teamInfo-opacity {
+          opacity: 1;
+        }
+      }
+      .teamInfo-opacity {
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .team-img1 {
+        position: absolute;
+        left: 5%;
+        bottom: -216px;
+        background: url("/img/team1.jpg") no-repeat center center/cover;
+      }
+      .team-info1 {
+        position: absolute;
+        left: 2.5%;
+        bottom: -350px;
+      }
+      .team-img2 {
+        position: absolute;
+        left: 25%;
+        bottom: -175px;
+        background: url("/img/team2.jpg") no-repeat center center/cover;
+      }
+      .team-info2 {
+        position: absolute;
+        left: 23%;
+        bottom: -310px;
+      }
+      .team-img3 {
+        position: absolute;
+        left: 47%;
+        bottom: -174px;
+        background: url("/img/team3.jpg") no-repeat center center/cover;
+      }
+      .team-info3 {
+        position: absolute;
+        left: 44.5%;
+        bottom: -305px;
+      }
+      .team-img4 {
+        position: absolute;
+        right: 25%;
+        bottom: -208px;
+        background: url("/img/team4.jpg") no-repeat center center/cover;
+      }
+      .team-info4 {
+        position: absolute;
+        right: 21.7%;
+        bottom: -340px;
+      }
+      .team-img5 {
+        position: absolute;
+        right: 5%;
+        bottom: -190px;
+        background: url("/img/team5.jpg") no-repeat center center/cover;
+      }
+      .team-info5 {
+        position: absolute;
+        right: 2%;
+        width: 130px;
+        bottom: -315px;
+      }
     }
   }
-  .team {
-    position: relative;
+  .team-b {
     min-width: 300px;
     max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    
-    h2 {
-      color: #e74c3c;
-      letter-spacing: 1.5px;
-      margin-bottom: 0.5rem;
-      margin-top: 0;
-    }
-    p {
-      margin-top: 0;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-
-    .teamImg {
-      width: 65px;
-      height: 65px;
-      border: 2px solid #e74c3c;
-      border-radius: 50%;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: rgba($color: #e74c3c, $alpha: 0.5);
-        opacity: 0;
-        transition: opacity 0.4s;
+    margin: 1rem auto;
+    .integrations {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+      &-item {
+        justify-content: center;
+        margin: 1rem 0;
+        background: #fff;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        flex-basis: 18%;
+        box-shadow: 0 2px 7px rgba($color: #000000, $alpha: 0.1);
+        div{
+          align-self: center;
+          img{
+            max-width: 100%;
+          }
+        }
       }
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -42px;
-        left: 50%;
-        width: 1px;
-        height: 40px;
-        background: #aaa;
-        opacity: 0;
-        transition: opacity 0.4s;
-      }
-      &:hover:after,
-      &:hover:before,
-      &:hover + .teamInfo-opacity {
-        opacity: 1;
-      }
-    }
-    .teamInfo-opacity {
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-    .team-img1 {
-      position: absolute;
-      left: 5%;
-      bottom: -216px;
-      background: url("/img/team1.jpg") no-repeat center center/cover;
-    }
-    .team-info1 {
-      position: absolute;
-      left: 2.5%;
-      bottom: -350px;
-    }
-    .team-img2 {
-      position: absolute;
-      left: 25%;
-      bottom: -175px;
-      background: url("/img/team2.jpg") no-repeat center center/cover;
-    }
-    .team-info2 {
-      position: absolute;
-      left: 23%;
-      bottom: -310px;
-    }
-    .team-img3 {
-      position: absolute;
-      left: 47%;
-      bottom: -174px;
-      background: url("/img/team3.jpg") no-repeat center center/cover;
-    }
-    .team-info3 {
-      position: absolute;
-      left: 44.5%;
-      bottom: -305px;
-    }
-    .team-img4 {
-      position: absolute;
-      right: 25%;
-      bottom: -208px;
-      background: url("/img/team4.jpg") no-repeat center center/cover;
-    }
-    .team-info4 {
-      position: absolute;
-      right: 21.7%;
-      bottom: -340px;
-    }
-    .team-img5 {
-      position: absolute;
-      right: 5%;
-      bottom: -190px;
-      background: url("/img/team5.jpg") no-repeat center center/cover;
-    }
-    .team-info5 {
-      position: absolute;
-      right: 2%;
-      width: 130px;
-      bottom: -315px;
     }
   }
 }
