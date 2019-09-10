@@ -42,6 +42,7 @@ let controller = {
         window.addEventListener('scroll', changeNavBackground)
         window.addEventListener('load', controller.scrollSpy)
         window.addEventListener('resize', controller.scrollSpy)
+        window.addEventListener('scroll', controller.scrollSpy)
     },
     slider: () => {
         let swiper1 = new Swiper(".slider-1", {

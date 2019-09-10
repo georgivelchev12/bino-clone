@@ -130,7 +130,7 @@ ul {
     margin: 1.6rem auto 3rem auto; }
 
 #navbar {
-  z-index: 5;
+  z-index: 20;
   width: 100%;
   height: 4.8rem;
   position: fixed; }
@@ -996,6 +996,50 @@ ul {
         border: none;
         border-bottom: 1px solid rgba(231, 76, 60, 0.8);
         outline: 0 none; }
+
+#contact .contact-b {
+  position: relative;
+  margin-top: 6rem;
+  width: 100%;
+  padding: 140px 0;
+  background: url("/img/contact-bImg.jpg") no-repeat center center/cover; }
+  #contact .contact-b:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); }
+  #contact .contact-b .container {
+    position: relative;
+    width: 70%;
+    min-width: 300px;
+    max-width: 1200px;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 0 1.5rem; }
+    @media (max-width: 350px) {
+      #contact .contact-b .container {
+        padding: 0; } }
+    #contact .contact-b .container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500; }
+      @media (max-width: 350px) {
+        #contact .contact-b .container h1 {
+          font-size: 1.4rem; } }
+    #contact .contact-b .container p {
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 3.5rem; }
+      @media (max-width: 350px) {
+        #contact .contact-b .container p {
+          font-size: 0.9rem; } }
+    @media (max-width: 350px) {
+      #contact .contact-b .container .btn-primary {
+        padding: 0.8rem 1.5rem; } }
 
 @keyframes glowing {
   0% {
