@@ -117,14 +117,24 @@ a {
       margin-top: 4.5rem;
       margin-bottom: 1.4rem;
       padding-left: 1rem;
+      @include breakpoint(max, width, 945px) {
+        font-size: 1.7rem;
+      }
     }
     p {
       line-height: 1.8;
       font-size: 1rem;
+      @include breakpoint(max, width, 945px) {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
     }
     .bar {
       width: 15%;
       margin: 1.6rem auto 3rem auto;
+      @include breakpoint(max, width, 945px) {
+        width: 40%;
+      }
     }
   }
   

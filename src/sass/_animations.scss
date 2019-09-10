@@ -1,8 +1,8 @@
 @keyframes glowing {
-    0% {
-      box-shadow: 0 0 0 0px rgba($color: #eee, $alpha: 0.3);
-    }
-    100% {
-      box-shadow: 0 0 0 15px rgba($color: #eee, $alpha: 0);
-    }
+  0% {
+    box-shadow: 0 0 0 0px rgba($color: #eee, $alpha: 0.3);
   }
+  100% {
+    box-shadow: 0 0 0 15px rgba($color: #eee, $alpha: 0);
+  }
+}

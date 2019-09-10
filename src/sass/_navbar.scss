@@ -3,6 +3,12 @@
     width: 100%;
     height: 4.8rem;
     position: fixed;
+    @include breakpoint(max, width, 1450px) {
+      height: 3.8rem;
+    }
+    @include breakpoint(max, width, 945px) {
+      height: 3.5rem;
+    }
     .nav {
       padding-top: 0.7rem;
       width: 70%;
@@ -12,18 +18,101 @@
       text-align: center;
       align-items: center;
       position: relative;
+      @include breakpoint(max, width, 1450px) {
+        padding-top: 0.3rem;
+        width: 80%;
+      }
+      @include breakpoint(max, width, 945px) {
+        .sidebar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 2;
+          top: 0;
+          right: 0;
+          background-color: #111;
+          opacity: 0.95;
+          overflow: hidden;
+          transition: 0.4s;
+          .closebtn {
+            display: block;
+            position: absolute;
+            top: 1.2%;
+            right: 5.5%;
+            font-size: 36px;
+            margin-left: 50px;
+            color: #fff;
+          }
+        }
+        .openbtn {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin-top: 0.5rem;
+          border: none;
+          width: 40px;
+          outline: none;
+          height: 35px;
+          padding: 1rem;
+          background: #e74c3c;
+          opacity: 0.85;
+          display: flex;
+          align-items: center;
+          border-radius: 4px;
+          justify-content: center;
+          transition: all 0.4s ease;
+          border: 1px solid #e74c3c;
+          div {
+            position: relative;
+            flex: none;
+            width: 300%;
+            height: 2px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            &:after,
+            &:before {
+              content: "";
+              position: absolute;
+              z-index: 1;
+              top: -10px;
+              width: 100%;
+              height: 2px;
+              background: #fff;
+            }
+            &:after {
+              top: 10px;
+            }
+          }
+          &:hover {
+            background: transparent;
+            border: 1px solid #fff;
+          }
+        }
+      }
       .nav-brand {
         position: absolute;
         text-align: start;
         padding-right: 0.7rem;
-  
         border: 1.5px solid #fff;
         transition: all 0.3s;
+        @include breakpoint(max, width, 1450px) {
+          margin-top: 0.5rem;
+        }
+        @include breakpoint(max, width, 945px) {
+          margin-top: 0.3rem;
+        }
         h1 {
           color: #fff;
           font-size: 2.3rem;
           margin: 0;
           transition: all 0.3s;
+          @include breakpoint(max, width, 1450px) {
+            font-size: 1.5rem;
+          }
           span {
             color: #6a6a6a;
             background: #fff;
@@ -50,6 +139,24 @@
         right: 0;
         display: flex;
         transition: all 0.3s;
+        @include breakpoint(max, width, 945px) {
+          flex-direction: column;
+          padding: 0;
+          right: 0;
+          left: 0;
+          margin: 5rem auto 0 auto;
+          @include breakpoint(max, height, 500px) {
+            margin-top: 2.7rem;
+          }
+        }
+        li{
+          @include breakpoint(max, width, 945px) {
+            margin-bottom: 2rem;
+          }
+          @include breakpoint(max, height, 500px) {
+            margin-bottom: 1rem;
+          }
+        }
         a {
           position: relative;
           font-size: 1.1rem;
@@ -58,6 +165,14 @@
           text-transform: uppercase;
           transition: all 0.3s;
           padding: 1rem;
+          @include breakpoint(max, width, 1450px) {
+            font-size: 0.9rem;
+            padding: 1rem 0.5rem;
+          }
+          @include breakpoint(max, height, 500px) {
+            font-size: 0.8rem;
+            padding: 0.3rem;
+          }
           &:after {
             content: "";
             position: absolute;

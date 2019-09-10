@@ -6,11 +6,22 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include breakpoint(max, width, 900px) {
+      justify-content: center;
+      width: 100%;
+    }
     .package {
       background: #f4f5f9;
       flex-basis: 32%;
       transition: all 0.4s;
       margin-bottom: 1.5rem;
+      @include breakpoint(max, width, 900px) {
+        flex-basis: 45%;
+        margin: 20px 2.5%;
+      }
+      @include breakpoint(max, width, 580px) {
+        flex-basis: 100%;
+      }
       &-top {
         background: #999;
         color: #fff;

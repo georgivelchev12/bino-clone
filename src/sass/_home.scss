@@ -1,6 +1,5 @@
 #home {
     overflow: hidden;
-    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     .slider-home {
@@ -30,28 +29,138 @@
               height: 100%;
               width: 100%;
               color: #dadada;
+              @include breakpoint(max, width, 800px) {
+                width: 80%;
+              }
               h3 {
                 font-size: 1.5rem;
                 font-weight: 450;
                 letter-spacing: 1px;
+                @include breakpoint(max, width, 1450px) {
+                  @include breakpoint(max, height, 800px) {
+                    font-size: 1rem;
+                  }
+                }
+                @include breakpoint(max, height, 800px) {
+                  font-size: 1.3rem;
+                }
+                @include breakpoint(max, width, 1450px) {
+                  font-size: 1.5rem;
+                }
+                @include breakpoint(max, width, 945px) {
+                  font-size: 1.2rem;
+                }
+                @include breakpoint(max, width, 500px) {
+                  font-size: 0.9rem;
+                }
+                @include breakpoint(max, height, 450px) {
+                  font-size: 0.8rem;
+                  margin-bottom: 0.5rem;
+                  margin-top: 0;
+                }
               }
               h1 {
                 margin: 0 0 1rem 0;
                 font-size: 5rem;
                 text-transform: uppercase;
                 letter-spacing: 2px;
+                @include breakpoint(max, width, 1450px) {
+                  @include breakpoint(max, height, 800px) {
+                    font-size: 3rem;
+                    margin: 0 0 0.8rem 0;
+                  }
+                }
+                @include breakpoint(max, height, 800px) {
+                  font-size: 3.3rem;
+                  margin: 0 0 0.8rem 0;
+                }
+  
+                @include breakpoint(max, width, 1450px) {
+                  font-size: 3.5rem;
+                }
+                @include breakpoint(max, width, 945px) {
+                  font-size: 2.5rem;
+                }
+                @include breakpoint(max, width, 500px) {
+                  font-size: 1.8rem;
+                }
+                @include breakpoint(max, height, 450px) {
+                  font-size: 1.5rem;
+                  margin-bottom: 0.2rem;
+                }
               }
               p {
                 width: 70%;
                 margin-top: 1.5rem;
                 margin-bottom: 4rem;
+                @include breakpoint(max, width, 1450px) {
+                  @include breakpoint(max, height, 800px) {
+                    font-size: 0.9rem;
+                  }
+                }
+                @include breakpoint(max, width, 945px) {
+                  font-size: 0.9rem;
+                }
+                @include breakpoint(max, height, 800px) {
+                  font-size: 0.9rem;
+                  margin: 1rem 0 2rem 0;
+                }
+                @include breakpoint(max, width, 500px) {
+                  margin: 0.8rem 0 1rem 0;
+                  font-size: 0.7rem;
+                  width: 80%;
+                }
+                @include breakpoint(max, height, 450px) {
+                  margin: 0.8rem 0 1rem 0;
+                  font-size: 0.65rem;
+                  width: 80%;
+                }
               }
               .home-btns {
                 .btn-primary {
                   margin-right: 0.6rem;
+                  @include breakpoint(max, width, 1450px) {
+                    @include breakpoint(max, height, 800px) {
+                      font-size: 0.8rem;
+                      padding: 0.6rem 1.4rem;
+                    }
+                  }
+                  @include breakpoint(max, width, 945px) {
+                    font-size: 0.8rem;
+                    padding: 0.6rem 1.2rem;
+                  }
+  
+                  @include breakpoint(max, width, 500px) {
+                    margin-right: 0.2rem;
+                    font-size: 0.6rem;
+                    padding: 0.5rem 0.7rem;
+                  }
+                  @include breakpoint(max, height, 450px) {
+                    font-size: 0.55rem;
+                    padding: 0.5rem 0.7rem;
+                  }
                 }
                 .btn-outline-primary {
                   margin-left: 0.6rem;
+                  @include breakpoint(max, width, 1450px) {
+                    @include breakpoint(max, height, 800px) {
+                      font-size: 0.8rem;
+                      padding: 0.6rem 2.7rem;
+                    }
+                  }
+                  @include breakpoint(max, width, 945px) {
+                    font-size: 0.8rem;
+                    padding: 0.6rem 2.2rem;
+                  }
+                  @include breakpoint(max, width, 500px) {
+                    margin-left: 0.2rem;
+                    font-size: 0.6rem;
+                    padding: 0.5rem 1.6rem;
+                  }
+                  @include breakpoint(max, height, 450px) {
+                    font-size: 0.6rem;
+                    padding: 0.5rem 1.6rem;
+                  }
                 }
               }
             }
@@ -67,6 +176,9 @@
           padding: 0 0.4rem;
           border-radius: 4px;
           transition: all 0.3s;
+          @include breakpoint(max, width, 700px) {
+            font-size: 1.4rem;
+          }
           &:hover {
             background: #e74c3c;
             color: rgba($color: #fff, $alpha: 0.7);
@@ -118,6 +230,15 @@
       animation: glowing 800ms infinite;
       transition: all 0.3s;
       z-index:1;
+      @include breakpoint(max, width, 700px) {
+        width: 40px;
+        height: 40px;
+        &:before {
+          content: "";
+          width: 40px;
+          height: 40px;
+        }
+      }
       &:before {
         content: "";
         position: absolute;
