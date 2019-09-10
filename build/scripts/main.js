@@ -38,7 +38,7 @@ var controller = {
     window.addEventListener('scroll', changeNavBackground);
     window.addEventListener('load', controller.scrollSpy);
     window.addEventListener('resize', controller.scrollSpy);
-    window.addEventListener('scroll', controller.scrollSpy);
+    setTimeout(controller.scrollSpy, 3000);
   },
   slider: function slider() {
     var swiper1 = new Swiper(".slider-1", {
