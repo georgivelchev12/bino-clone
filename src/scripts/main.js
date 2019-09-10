@@ -71,21 +71,22 @@ let controller = {
     navbarToggler: () => {
         if (window.innerWidth <= 945) {
             let navbarAttrChanging = document.querySelectorAll(".nav-a");
-            let toggleNav = (percantage) => {
-                document.getElementById("mySidebar").style.width = percantage;
-            }
+
             document.getElementsByClassName('openbtn')[0].addEventListener('click', () => {
                 document.body.style.overflowY = "hidden";
-                toggleNav("40%")
+                document.getElementById("mySidebar").classList.add('sidebar-visible');
+
             })
             document.getElementsByClassName('closebtn')[0].addEventListener('click', () => {
                 document.body.style.overflowY = "visible";
-                toggleNav("0")
+                document.getElementById("mySidebar").classList.remove('sidebar-visible');
+
             })
             navbarAttrChanging.forEach(e => {
                 e.addEventListener('click', () => {
                     document.body.style.overflowY = "visible";
-                    toggleNav("0")
+                    document.getElementById("mySidebar").classList.remove('sidebar-visible');
+
                 });
             })
         }
@@ -121,7 +122,7 @@ let controller = {
     },
 
     statCounter: () => {
-        jQuery(document).ready(function($) {
+        jQuery(document).ready(function ($) {
             $('.counter').counterUp({
                 delay: 10,
                 time: 1000

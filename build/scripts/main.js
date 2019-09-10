@@ -69,23 +69,18 @@ var controller = {
   navbarToggler: function navbarToggler() {
     if (window.innerWidth <= 945) {
       var navbarAttrChanging = document.querySelectorAll(".nav-a");
-
-      var toggleNav = function toggleNav(percantage) {
-        document.getElementById("mySidebar").style.width = percantage;
-      };
-
       document.getElementsByClassName('openbtn')[0].addEventListener('click', function () {
         document.body.style.overflowY = "hidden";
-        toggleNav("40%");
+        document.getElementById("mySidebar").classList.add('sidebar-visible');
       });
       document.getElementsByClassName('closebtn')[0].addEventListener('click', function () {
         document.body.style.overflowY = "visible";
-        toggleNav("0");
+        document.getElementById("mySidebar").classList.remove('sidebar-visible');
       });
       navbarAttrChanging.forEach(function (e) {
         e.addEventListener('click', function () {
           document.body.style.overflowY = "visible";
-          toggleNav("0");
+          document.getElementById("mySidebar").classList.remove('sidebar-visible');
         });
       });
     }
