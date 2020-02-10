@@ -7,7 +7,6 @@ let controller = {
         controller.filterImg();
         controller.wowAnimations();
         controller.statCounter();
-
     },
     scrollSpy: () => {
         let sections = {};
@@ -137,7 +136,6 @@ let controller = {
 
 
 window.onload = () => {
-
     controller.init();
 }
 
